@@ -42,30 +42,30 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/student", studentRouter);
 app.use("/admin", adminRouter);
-app.use("/instructor",instructorRouter)
-app.use("/onlineClass",classRouter)
-app.use("/joinclass",attendanceRouter)
-app.use("/blog",blogRouter)
-app.use("/slider",sliderRouter)
-app.use("/testimonial",testimonialRouter)
-app.use("/category",categoryRouter)
-app.use("/course",createcourseRouter)
-app.use("/enroll",enrollmentRouter)
-app.use("/test",testRouter)
-app.use("/result",resultRouter)
-app.use("/payment",paymentRouter)
-app.use("/scholarship" ,scholarshipRouter)
+app.use("/instructor", instructorRouter)
+app.use("/onlineClass", classRouter)
+app.use("/joinclass", attendanceRouter)
+app.use("/blog", blogRouter)
+app.use("/slider", sliderRouter)
+app.use("/testimonial", testimonialRouter)
+app.use("/category", categoryRouter)
+app.use("/course", createcourseRouter)
+app.use("/enroll", enrollmentRouter)
+app.use("/test", testRouter)
+app.use("/result", resultRouter)
+app.use("/payment", paymentRouter)
+app.use("/scholarship", scholarshipRouter)
 app.use("/success-story", successStoryRouter);
 app.use("/callback", callbackRouter);
 app.use("/faculty", facultyRouter);
-app.use("/progress",progressRouter)
+app.use("/progress", progressRouter)
 
 
 
 const frontendPath = path.join(__dirname, "../Frontend/dist");
 app.use(express.static(frontendPath));
 
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(frontendPath, "index.html"));
 });
 
