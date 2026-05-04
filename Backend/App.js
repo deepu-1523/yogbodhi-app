@@ -1,6 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 import connectdb from "./config/connectdb.js";
 
 import studentRouter from "./modules/Student/student.routes.js";
@@ -26,6 +28,9 @@ import progressRouter from "./modules/Student/progress/progress.routes.js";
 
 dotenv.config();
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 connectdb();
 
@@ -56,8 +61,12 @@ app.use("/faculty", facultyRouter);
 app.use("/progress",progressRouter)
 
 
-app.get("/", (req, res) => {
-  res.send("Server is running 🚀");
+
+const frontendPath = path.join(__dirname, "../Frontend/dist");
+app.use(express.static(frontendPath));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(frontendPath, "index.html"));
 });
 
 export default app;

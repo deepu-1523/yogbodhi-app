@@ -58,7 +58,6 @@ import Typography from '@tiptap/extension-typography';
 import Image from '@tiptap/extension-image';
 import UnderlineExtension from '@tiptap/extension-underline';
 
-// Custom YouTube icon component
 const YoutubeIcon = ({ size = 16 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
