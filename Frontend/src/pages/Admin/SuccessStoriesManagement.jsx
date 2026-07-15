@@ -152,7 +152,7 @@ const SuccessStoriesManagement = () => {
                   </button>
                   <button
                     onClick={() => handleDelete(story._id)}
-                    className="p-2 bg-white rounded-full text-red-600 hover:bg-red-50 transition"
+                    className="p-2 bg-white rounded-full text-yellow-600 hover:bg-yellow-50 transition"
                   >
                     <Trash2 size={18} />
                   </button>

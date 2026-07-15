@@ -171,7 +171,7 @@ const AdminCourseManager = () => {
         {message.text && (
           <div className={`mb-6 p-4 rounded-lg ${message.type === 'success'
               ? 'bg-green-100 border border-green-400 text-green-700'
-              : 'bg-red-100 border border-red-400 text-red-700'
+              : 'bg-yellow-100 border border-yellow-400 text-red-700'
             }`}>
             <div className="flex items-center">
               {message.type === 'success' ? (
@@ -199,7 +199,7 @@ const AdminCourseManager = () => {
             {/* Course Title */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Course Title <span className="text-red-500">*</span>
+                Course Title <span className="text-yellow-500">*</span>
               </label>
               <input
                 type="text"
@@ -215,7 +215,7 @@ const AdminCourseManager = () => {
             {/* Description */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Description <span className="text-red-500">*</span>
+                Description <span className="text-yellow-500">*</span>
               </label>
               <textarea
                 name="discreption"
@@ -231,7 +231,7 @@ const AdminCourseManager = () => {
             {/* Instructor */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Instructor <span className="text-red-500">*</span>
+                Instructor <span className="text-yellow-500">*</span>
               </label>
               <input
                 type="text"
@@ -248,7 +248,7 @@ const AdminCourseManager = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Duration <span className="text-red-500">*</span>
+                  Duration <span className="text-yellow-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -262,7 +262,7 @@ const AdminCourseManager = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Price <span className="text-red-500">*</span>
+                  Price <span className="text-yellow-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -314,7 +314,7 @@ const AdminCourseManager = () => {
             {/* Thumbnail Upload */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Course Thumbnail <span className="text-red-500">*</span>
+                Course Thumbnail <span className="text-yellow-500">*</span>
               </label>
               <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg hover:border-indigo-500 transition-colors">
                 <div className="space-y-1 text-center">
@@ -324,7 +324,7 @@ const AdminCourseManager = () => {
                       <button
                         type="button"
                         onClick={removeImage}
-                        className="mt-2 text-sm text-red-600 hover:text-red-800 font-medium"
+                        className="mt-2 text-sm text-yellow-600 hover:text-red-800 font-medium"
                         disabled={loading}
                       >
                         Remove Image

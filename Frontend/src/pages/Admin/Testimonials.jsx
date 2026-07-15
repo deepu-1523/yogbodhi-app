@@ -227,7 +227,7 @@ export default function AdminTestimonials() {
                     className={`fixed top-4 right-4 left-4 sm:left-auto sm:right-4 z-50 px-3 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg animate-slide-in text-xs sm:text-sm md:text-base ${
                         notification.type === "success"
                             ? "bg-green-500 text-white"
-                            : "bg-red-500 text-white"
+                            : "bg-yellow-500 text-white"
                     }`}
                 >
                     {notification.message}
@@ -320,7 +320,7 @@ export default function AdminTestimonials() {
                                                 </button>
                                                 <button
                                                     onClick={() => handleDelete(testimonial?._id)}
-                                                    className="text-red-600 hover:text-red-900 p-1"
+                                                    className="text-yellow-600 hover:text-red-900 p-1"
                                                 >
                                                     <Trash2 className="w-3.5 h-3.5" />
                                                 </button>
@@ -460,7 +460,7 @@ export default function AdminTestimonials() {
                                                     </button>
                                                     <button
                                                         onClick={() => handleDelete(testimonial?._id)}
-                                                        className="text-red-600 hover:text-red-900 transition-colors p-1"
+                                                        className="text-yellow-600 hover:text-red-900 transition-colors p-1"
                                                         title="Delete"
                                                     >
                                                         <Trash2 className="w-4 h-4" />
@@ -525,7 +525,7 @@ export default function AdminTestimonials() {
                                                             setImageFile(null);
                                                             setFormData(prev => ({ ...prev, image: "" }));
                                                         }}
-                                                        className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600 transition-colors"
+                                                        className="absolute -top-2 -right-2 bg-yellow-500 text-white rounded-full p-1 hover:bg-yellow-600 transition-colors"
                                                     >
                                                         <X className="w-3 h-3" />
                                                     </button>
@@ -559,7 +559,7 @@ export default function AdminTestimonials() {
                                 {/* Name */}
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                                        Student Name <span className="text-red-500">*</span>
+                                        Student Name <span className="text-yellow-500">*</span>
                                     </label>
                                     <input
                                         type="text"
@@ -605,7 +605,7 @@ export default function AdminTestimonials() {
                                 {/* Review */}
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                                        Review <span className="text-red-500">*</span>
+                                        Review <span className="text-yellow-500">*</span>
                                     </label>
                                     <textarea
                                         name="review"

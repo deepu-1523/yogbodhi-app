@@ -104,7 +104,7 @@ const Settings = () => {
         <div className="flex items-center justify-between mb-8">
           <div>
             <div className="flex items-center gap-2 mb-1">
-               <div className="w-1.5 h-1.5 rounded-full bg-[#FB0500]" />
+               <div className="w-1.5 h-1.5 rounded-full bg-[#ba9d25]" />
                <p className="text-[9px] font-black text-gray-400 uppercase tracking-[0.3em]">Portal / Control</p>
             </div>
             <h1 className="text-2xl font-black text-gray-900 tracking-tight leading-none uppercase">Settings</h1>
@@ -191,7 +191,7 @@ const Settings = () => {
                              <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-2">New Password</label>
                              <div className="relative">
                                 <Lock size={14} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300" />
-                                <input name="newPassword" type={showPassword ? "text" : "password"} value={formData.newPassword} onChange={handleInputChange} className="w-full bg-gray-50 border border-gray-100 rounded-xl py-3 pl-11 pr-11 text-xs font-black focus:outline-none focus:border-[#FB0500] transition-all" />
+                                <input name="newPassword" type={showPassword ? "text" : "password"} value={formData.newPassword} onChange={handleInputChange} className="w-full bg-gray-50 border border-gray-100 rounded-xl py-3 pl-11 pr-11 text-xs font-black focus:outline-none focus:border-[#ba9d25] transition-all" />
                                 <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-300 hover:text-gray-600 transition-colors">
                                    {showPassword ? <EyeOff size={14} /> : <Eye size={14} />}
                                 </button>
@@ -201,13 +201,13 @@ const Settings = () => {
                              <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-2">Confirm Authorization</label>
                              <div className="relative">
                                 <ShieldCheck size={14} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300" />
-                                <input name="confirmPassword" type={showPassword ? "text" : "password"} value={formData.confirmPassword} onChange={handleInputChange} className="w-full bg-gray-50 border border-gray-100 rounded-xl py-3 pl-11 pr-4 text-xs font-black focus:outline-none focus:border-[#FB0500] transition-all" />
+                                <input name="confirmPassword" type={showPassword ? "text" : "password"} value={formData.confirmPassword} onChange={handleInputChange} className="w-full bg-gray-50 border border-gray-100 rounded-xl py-3 pl-11 pr-4 text-xs font-black focus:outline-none focus:border-[#ba9d25] transition-all" />
                              </div>
                           </div>
                        </div>
                     </div>
                     <div className="p-8 bg-gray-50/50 flex justify-end">
-                       <button disabled={loading} type="submit" className="flex items-center gap-2 bg-[#FB0500] text-white px-8 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-[#d00400] transition-all">
+                       <button disabled={loading} type="submit" className="flex items-center gap-2 bg-[#ba9d25] text-white px-8 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-[#d00400] transition-all">
                           <ZapIcon size={16} /> Update Credentials
                        </button>
                     </div>

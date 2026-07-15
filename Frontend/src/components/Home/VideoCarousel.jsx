@@ -76,7 +76,7 @@ const VideoCarousel = () => {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all flex items-center justify-center">
-                <div className="bg-red-600/90 rounded-full p-4 shadow-xl transform group-hover:scale-110 transition-transform duration-500">
+                <div className="bg-yellow-600/90 rounded-full p-4 shadow-xl transform group-hover:scale-110 transition-transform duration-500">
                   <svg className="w-8 h-8 text-white fill-current" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>
@@ -87,7 +87,7 @@ const VideoCarousel = () => {
               </div>
             </div>
             <div className="p-4 bg-white/80 backdrop-blur-md">
-              <h3 className="font-bold text-gray-800 text-sm whitespace-normal line-clamp-2 group-hover:text-red-600 transition-colors">
+              <h3 className="font-bold text-gray-800 text-sm whitespace-normal line-clamp-2 group-hover:text-yellow-600 transition-colors">
                 {video.title}
               </h3>
               <div className="mt-2 flex items-center text-[10px] text-gray-500 font-medium uppercase tracking-wider">

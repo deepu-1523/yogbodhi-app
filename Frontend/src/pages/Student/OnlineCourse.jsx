@@ -316,10 +316,10 @@
 //     switch(status?.toLowerCase()) {
 //       case 'live':
 //         return {
-//           bgColor: 'bg-red-500',
+//           bgColor: 'bg-yellow-500',
 //           textColor: 'text-white',
 //           animation: 'animate-pulse',
-//           buttonClass: 'bg-red-600 hover:bg-red-700',
+//           buttonClass: 'bg-yellow-600 hover:bg-red-700',
 //           buttonText: 'Join Live Now'
 //         };
 //       case 'completed':
@@ -399,7 +399,7 @@
 //             </div>
 //           )}
 //           {joinErrorMessage && (
-//             <div className="bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-2">
+//             <div className="bg-yellow-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-2">
 //               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 //                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
 //               </svg>
@@ -542,8 +542,8 @@
 //                     </div>
 
 //                     {joinStatusMsg?.error && (
-//                       <div className="mb-3 p-2 bg-red-50 border border-red-200 rounded-lg">
-//                         <p className="text-red-600 text-xs">{joinStatusMsg.error}</p>
+//                       <div className="mb-3 p-2 bg-yellow-50 border border-yellow-200 rounded-lg">
+//                         <p className="text-yellow-600 text-xs">{joinStatusMsg.error}</p>
 //                       </div>
 //                     )}
 //                     {joinStatusMsg?.success && (
@@ -759,7 +759,7 @@
 //                     }}
 //                     className={`w-full py-2.5 rounded-lg font-medium flex items-center justify-center gap-2 transition-all duration-300 shadow-md ${
 //                       selectedCourse.status === 'Live'
-//                         ? 'bg-red-600 text-white hover:bg-red-700'
+//                         ? 'bg-yellow-600 text-white hover:bg-red-700'
 //                         : 'bg-blue-600 text-white hover:bg-blue-700'
 //                     }`}
 //                   >

@@ -635,7 +635,7 @@ const AdminTestCreator = () => {
                                 deleteTest(test._id, test.title);
                               }}
                               disabled={deletingTestId === test._id}
-                              className="p-1 text-red-600 hover:bg-red-50 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+                              className="p-1 text-yellow-600 hover:bg-yellow-50 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
                               title="Delete Test"
                             >
                               {deletingTestId === test._id ? (
@@ -706,7 +706,7 @@ const AdminTestCreator = () => {
                                       </button>
                                       <button
                                         onClick={() => handleDeleteQuestion(test._id, q._id)}
-                                        className="p-1.5 text-red-600 hover:bg-red-50 rounded-lg transition"
+                                        className="p-1.5 text-yellow-600 hover:bg-yellow-50 rounded-lg transition"
                                         title="Delete"
                                       >
                                         <Trash2 size={14} />
@@ -902,7 +902,7 @@ const AdminTestCreator = () => {
                               const newOptions = questionForm.options.filter((_, i) => i !== idx);
                               setQuestionForm({ ...questionForm, options: newOptions });
                             }}
-                            className="p-1 text-red-500 hover:text-red-700 hover:bg-red-50 rounded-lg transition"
+                            className="p-1 text-yellow-500 hover:text-red-700 hover:bg-yellow-50 rounded-lg transition"
                           >
                             <Trash2 size={14} className="sm:w-4 sm:h-4" />
                           </button>

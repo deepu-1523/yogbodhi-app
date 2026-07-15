@@ -97,7 +97,7 @@ const AllStudent = () => {
            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-8">
               <div>
                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-2 h-2 rounded-full bg-[#FB0500]" />
+                    <div className="w-2 h-2 rounded-full bg-[#ba9d25]" />
                     <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">Student Directory</p>
                  </div>
                  <h1 className="text-2xl font-black text-gray-900 tracking-tight leading-none">
@@ -306,7 +306,7 @@ const AllStudent = () => {
                      <p className="text-[11px] font-black text-[#0078FF] uppercase tracking-widest">{selectedStudent.currentClass} Sector</p>
                   </div>
                </div>
-               <button onClick={closeModal} className="absolute top-6 right-6 md:top-8 md:right-8 text-gray-300 hover:text-[#FB0500] transition-colors bg-gray-50 rounded-full p-2"><Plus size={20} className="rotate-45" /></button>
+               <button onClick={closeModal} className="absolute top-6 right-6 md:top-8 md:right-8 text-gray-300 hover:text-[#ba9d25] transition-colors bg-gray-50 rounded-full p-2"><Plus size={20} className="rotate-45" /></button>
             </div>
 
             {/* Modal Content */}
@@ -344,7 +344,7 @@ const AllStudent = () => {
             <div className="p-8 bg-gray-50/50 flex justify-end">
               <button
                 onClick={closeModal}
-                className="px-10 py-4 bg-[#0a1628] text-white rounded-2xl font-black text-[11px] uppercase tracking-widest hover:bg-[#FB0500] transition-all shadow-lg shadow-gray-200"
+                className="px-10 py-4 bg-[#0a1628] text-white rounded-2xl font-black text-[11px] uppercase tracking-widest hover:bg-[#ba9d25] transition-all shadow-lg shadow-gray-200"
               >
                 Close Profile
               </button>

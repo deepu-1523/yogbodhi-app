@@ -401,7 +401,7 @@ const AdminBlogPanel = () => {
 
                 {/* Error Messages - Responsive */}
                 {errors.fetch && (
-                    <div className="mb-4 p-2.5 sm:p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg text-xs sm:text-sm">
+                    <div className="mb-4 p-2.5 sm:p-3 bg-yellow-100 border border-yellow-400 text-red-700 rounded-lg text-xs sm:text-sm">
                         {errors.fetch}
                         <button
                             onClick={() => GetBlogs()}
@@ -413,7 +413,7 @@ const AdminBlogPanel = () => {
                 )}
 
                 {errors.submit && (
-                    <div className="mb-4 p-2.5 sm:p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg text-xs sm:text-sm">
+                    <div className="mb-4 p-2.5 sm:p-3 bg-yellow-100 border border-yellow-400 text-red-700 rounded-lg text-xs sm:text-sm">
                         {errors.submit}
                     </div>
                 )}
@@ -481,12 +481,12 @@ const AdminBlogPanel = () => {
                                             name="title"
                                             value={formData.title}
                                             onChange={handleInputChange}
-                                            className={`w-full px-3 py-2 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition ${errors.title ? 'border-red-500' : 'border-gray-300'
+                                            className={`w-full px-3 py-2 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition ${errors.title ? 'border-yellow-500' : 'border-gray-300'
                                                 }`}
                                             placeholder="Enter blog title"
                                             autoFocus
                                         />
-                                        {errors.title && <p className="mt-1 text-xs text-red-500">{errors.title}</p>}
+                                        {errors.title && <p className="mt-1 text-xs text-yellow-500">{errors.title}</p>}
                                     </div>
 
                                     {/* Author and Category Row - Responsive Grid */}
@@ -500,11 +500,11 @@ const AdminBlogPanel = () => {
                                                 name="author"
                                                 value={formData.author}
                                                 onChange={handleInputChange}
-                                                className={`w-full px-3 py-2 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition ${errors.author ? 'border-red-500' : 'border-gray-300'
+                                                className={`w-full px-3 py-2 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition ${errors.author ? 'border-yellow-500' : 'border-gray-300'
                                                     }`}
                                                 placeholder="Author name"
                                             />
-                                            {errors.author && <p className="mt-1 text-xs text-red-500">{errors.author}</p>}
+                                            {errors.author && <p className="mt-1 text-xs text-yellow-500">{errors.author}</p>}
                                         </div>
 
                                         <div>
@@ -516,11 +516,11 @@ const AdminBlogPanel = () => {
                                                 name="category"
                                                 value={formData.category}
                                                 onChange={handleInputChange}
-                                                className={`w-full px-3 py-2 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition ${errors.category ? 'border-red-500' : 'border-gray-300'
+                                                className={`w-full px-3 py-2 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition ${errors.category ? 'border-yellow-500' : 'border-gray-300'
                                                     }`}
                                                 placeholder="e.g., Technology, Lifestyle"
                                             />
-                                            {errors.category && <p className="mt-1 text-xs text-red-500">{errors.category}</p>}
+                                            {errors.category && <p className="mt-1 text-xs text-yellow-500">{errors.category}</p>}
                                         </div>
                                     </div>
 
@@ -553,7 +553,7 @@ const AdminBlogPanel = () => {
                                                 <span className="text-xs sm:text-sm text-gray-700">Published</span>
                                             </label>
                                         </div>
-                                        {errors.status && <p className="mt-1 text-xs text-red-500">{errors.status}</p>}
+                                        {errors.status && <p className="mt-1 text-xs text-yellow-500">{errors.status}</p>}
                                     </div>
 
                                     {/* Image Upload Section - Responsive */}
@@ -574,7 +574,7 @@ const AdminBlogPanel = () => {
                                                 <button
                                                     type="button"
                                                     onClick={clearImage}
-                                                    className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600 transition"
+                                                    className="absolute -top-2 -right-2 bg-yellow-500 text-white rounded-full p-1 hover:bg-yellow-600 transition"
                                                 >
                                                     <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -637,11 +637,11 @@ const AdminBlogPanel = () => {
                                             value={formData.content}
                                             onChange={handleInputChange}
                                             rows={6}
-                                            className={`w-full px-3 py-2 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition resize-none ${errors.content ? 'border-red-500' : 'border-gray-300'
+                                            className={`w-full px-3 py-2 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition resize-none ${errors.content ? 'border-yellow-500' : 'border-gray-300'
                                                 }`}
                                             placeholder="Write your blog content here..."
                                         />
-                                        {errors.content && <p className="mt-1 text-xs text-red-500">{errors.content}</p>}
+                                        {errors.content && <p className="mt-1 text-xs text-yellow-500">{errors.content}</p>}
                                     </div>
                                 </div>
 
@@ -754,7 +754,7 @@ const AdminBlogPanel = () => {
                                                     </button>
                                                     <button
                                                         onClick={() => { handleDelete(blog.id); setDeletingBlogId(blog.id); }}
-                                                        className="p-1 sm:p-1.5 text-red-600 hover:bg-red-50 rounded-lg transition"
+                                                        className="p-1 sm:p-1.5 text-yellow-600 hover:bg-yellow-50 rounded-lg transition"
                                                         title="Delete"
                                                     >
                                                         <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

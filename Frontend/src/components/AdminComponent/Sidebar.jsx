@@ -132,7 +132,7 @@ const AdminSidebar = ({ isMobileOpen, setIsMobileOpen }) => {
              {!isCollapsed && (
                <div className="animate-fadeIn">
                   <h1 className="text-sm font-black text-gray-900 leading-none">Roots Classes</h1>
-                  <p className="text-[9px] font-bold text-[#FB0500] uppercase tracking-widest mt-1">{getDashboardTitle()}</p>
+                  <p className="text-[9px] font-bold text-[#ba9d25] uppercase tracking-widest mt-1">{getDashboardTitle()}</p>
                </div>
              )}
           </Link>
@@ -185,7 +185,7 @@ const AdminSidebar = ({ isMobileOpen, setIsMobileOpen }) => {
                 </div>
               )}
            </div>
-           <button onClick={handleLogout} className={`w-full flex items-center gap-3 p-3 mt-2 rounded-xl text-gray-400 hover:text-red-600 hover:bg-red-50 transition-all ${isCollapsed ? 'justify-center' : ''}`}>
+           <button onClick={handleLogout} className={`w-full flex items-center gap-3 p-3 mt-2 rounded-xl text-gray-400 hover:text-yellow-600 hover:bg-yellow-50 transition-all ${isCollapsed ? 'justify-center' : ''}`}>
               <LogOut size={18} />
               {!isCollapsed && <span className="text-xs font-bold uppercase tracking-widest">Logout</span>}
            </button>

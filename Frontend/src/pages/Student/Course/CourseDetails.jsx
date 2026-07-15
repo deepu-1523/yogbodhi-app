@@ -668,7 +668,7 @@ const CourseDetails = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Toast */}
       {toast.show && (
-        <div className={`fixed top-5 right-4 z-[9999] px-5 py-3 rounded-xl shadow-lg text-sm font-medium text-white flex items-center gap-2 transition-all ${toast.type === 'success' ? 'bg-green-500' : toast.type === 'error' ? 'bg-red-500' : 'bg-blue-500'
+        <div className={`fixed top-5 right-4 z-[9999] px-5 py-3 rounded-xl shadow-lg text-sm font-medium text-white flex items-center gap-2 transition-all ${toast.type === 'success' ? 'bg-green-500' : toast.type === 'error' ? 'bg-yellow-500' : 'bg-blue-500'
           }`}>
           {toast.type === 'success' && <CheckCircle size={15} />}
           {toast.type === 'error' && <X size={15} />}

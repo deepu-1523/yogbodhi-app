@@ -23,7 +23,7 @@ const FacultyShowcase = () => {
 
   if (loading) return (
     <div className="py-20 flex items-center justify-center">
-      <Loader2 className="w-8 h-8 animate-spin text-[#FB0500]" />
+      <Loader2 className="w-8 h-8 animate-spin text-[#ba9d25]" />
     </div>
   );
 
@@ -36,7 +36,7 @@ const FacultyShowcase = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <p className="text-xs font-bold text-[#0078FF] uppercase tracking-widest mb-3">Meet the Team</p>
+            <p className="text-xs font-bold text-[#ba9d25] uppercase tracking-widest mb-3">Meet the Team</p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Our Expert Faculty</h2>
           </div>
           <p className="text-sm text-gray-400 max-w-xs md:text-right">
@@ -49,7 +49,7 @@ const FacultyShowcase = () => {
           {faculty.map((member, index) => (
             <div
               key={member._id}
-              className={`group relative rounded-2xl overflow-hidden border border-gray-100 ${index % 3 === 1 ? 'md:mt-8' : ''
+              className={`group relative rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${index % 3 === 1 ? 'md:mt-8' : ''
                 }`}
             >
               {/* Photo area */}
@@ -68,7 +68,7 @@ const FacultyShowcase = () => {
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <h3 className="font-bold text-gray-900 text-base">{member.name}</h3>
-                    <span className="inline-block mt-1 text-xs font-semibold uppercase tracking-wide" style={{ color: index % 2 === 0 ? '#FB0500' : '#0078FF' }}>
+                    <span className="inline-block mt-1 text-xs font-semibold uppercase tracking-wide text-[#ba9d25]">
                       {member.subject}
                     </span>
                   </div>

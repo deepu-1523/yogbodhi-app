@@ -109,7 +109,7 @@ const Enrollment = () => {
             'Active': 'bg-green-100 text-green-800',
             'Pending': 'bg-yellow-100 text-yellow-800',
             'Completed': 'bg-blue-100 text-blue-800',
-            'Cancelled': 'bg-red-100 text-red-800',
+            'Cancelled': 'bg-yellow-100 text-red-800',
             'Dropped': 'bg-gray-100 text-gray-800'
         };
         return statusConfig[status] || 'bg-gray-100 text-gray-800';
@@ -119,7 +119,7 @@ const Enrollment = () => {
         const paymentConfig = {
             'Paid': 'bg-green-100 text-green-800',
             'Pending': 'bg-yellow-100 text-yellow-800',
-            'Failed': 'bg-red-100 text-red-800',
+            'Failed': 'bg-yellow-100 text-red-800',
             'Refunded': 'bg-purple-100 text-purple-800'
         };
         return paymentConfig[status] || 'bg-gray-100 text-gray-800';
@@ -294,7 +294,7 @@ const Enrollment = () => {
 
                 {/* Error Message */}
                 {error && (
-                    <div className="bg-red-100 border border-red-400 text-red-700 px-3 sm:px-4 py-2 sm:py-3 rounded-lg mb-4 sm:mb-6 text-sm">
+                    <div className="bg-yellow-100 border border-yellow-400 text-red-700 px-3 sm:px-4 py-2 sm:py-3 rounded-lg mb-4 sm:mb-6 text-sm">
                         <strong>Error:</strong> {error}
                         <button
                             onClick={GetAllPurchesCourse}

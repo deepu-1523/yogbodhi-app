@@ -395,7 +395,7 @@ const ManageSlider = () => {
                       </button>
                       <button
                         onClick={() => handleDelete(slider)}
-                        className="p-1.5 sm:p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                        className="p-1.5 sm:p-2 text-yellow-600 hover:bg-yellow-50 rounded-lg transition-colors"
                         title="Delete"
                       >
                         <Trash2 size={16} />
@@ -493,7 +493,7 @@ const ManageSlider = () => {
                           </button>
                           <button
                             onClick={() => handleDelete(slider)}
-                            className="p-1.5 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                            className="p-1.5 text-yellow-600 hover:bg-yellow-50 rounded-lg transition-colors"
                             title="Delete"
                           >
                             <Trash2 size={18} />
@@ -516,7 +516,7 @@ const ManageSlider = () => {
           </div>
           <button
             onClick={() => { resetVForm(); setVShowModal(true); }}
-            className="flex items-center justify-center gap-2 px-4 py-2 bg-[#FB0500] text-white rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-semibold"
+            className="flex items-center justify-center gap-2 px-4 py-2 bg-[#ba9d25] text-white rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-semibold"
           >
             <Video size={18} />
             Add Video Story
@@ -527,7 +527,7 @@ const ManageSlider = () => {
         <div className="block md:hidden space-y-3 sm:space-y-4 mb-20">
           {vLoading && videoStories.length === 0 ? (
             <div className="flex justify-center py-12">
-              <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#FB0500]"></div>
+              <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#ba9d25]"></div>
             </div>
           ) : videoStories.length === 0 ? (
             <div className="bg-white rounded-xl shadow-sm p-8 text-center text-gray-500">
@@ -558,7 +558,7 @@ const ManageSlider = () => {
                       setVFormData({ title: v.title, youtubeUrl: v.youtubeUrl, duration: v.duration, order: v.order, isActive: v.isActive });
                       setVShowModal(true);
                     }} className="p-1.5 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"><Pencil size={16} /></button>
-                    <button onClick={() => handleVDelete(v._id)} className="p-1.5 text-red-600 hover:bg-red-50 rounded-lg transition-colors"><Trash2 size={16} /></button>
+                    <button onClick={() => handleVDelete(v._id)} className="p-1.5 text-yellow-600 hover:bg-yellow-50 rounded-lg transition-colors"><Trash2 size={16} /></button>
                   </div>
                 </div>
               </div>
@@ -582,7 +582,7 @@ const ManageSlider = () => {
               </thead>
               <tbody className="bg-white divide-y divide-gray-100">
                 {vLoading && videoStories.length === 0 ? (
-                  <tr><td colSpan="6" className="text-center py-10"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#FB0500] mx-auto" /></td></tr>
+                  <tr><td colSpan="6" className="text-center py-10"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#ba9d25] mx-auto" /></td></tr>
                 ) : videoStories.length === 0 ? (
                   <tr><td colSpan="6" className="text-center py-20 text-gray-400">No video stories found.</td></tr>
                 ) : (
@@ -610,7 +610,7 @@ const ManageSlider = () => {
                             setVFormData({ title: v.title, youtubeUrl: v.youtubeUrl, duration: v.duration, order: v.order, isActive: v.isActive });
                             setVShowModal(true);
                           }} className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"><Pencil size={18} /></button>
-                          <button onClick={() => handleVDelete(v._id)} className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"><Trash2 size={18} /></button>
+                          <button onClick={() => handleVDelete(v._id)} className="p-2 text-yellow-600 hover:bg-yellow-50 rounded-lg transition-colors"><Trash2 size={18} /></button>
                         </div>
                       </td>
                     </tr>
@@ -710,7 +710,7 @@ const ManageSlider = () => {
               <div className="mb-6">
                 <div className="mb-3">
                   <label className="block text-sm font-medium text-gray-700">
-                    Responsive Banner Images {!isEditing && <span className="text-red-500">*</span>}
+                    Responsive Banner Images {!isEditing && <span className="text-yellow-500">*</span>}
                   </label>
                   <p className="mt-1 text-xs text-gray-500">
                     Upload all three sizes so the homepage can show the best banner on desktop, tablet, and mobile without cropping.
@@ -722,7 +722,7 @@ const ManageSlider = () => {
                     <div key={key} className="rounded-xl border border-gray-200 p-4">
                       <div className="mb-2 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                         <label className="text-sm font-semibold text-gray-700">
-                          {label} {!isEditing && <span className="text-red-500">*</span>}
+                          {label} {!isEditing && <span className="text-yellow-500">*</span>}
                         </label>
                         <span className="text-xs font-medium text-blue-600">{hint}</span>
                       </div>
@@ -742,7 +742,7 @@ const ManageSlider = () => {
                                   setImagePreviews(prev => ({ ...prev, [key]: '' }));
                                   setFormData(prev => ({ ...prev, [key]: null }));
                                 }}
-                                className="absolute -top-2 -right-2 rounded-full bg-red-500 p-1 text-white transition-colors hover:bg-red-600"
+                                className="absolute -top-2 -right-2 rounded-full bg-yellow-500 p-1 text-white transition-colors hover:bg-yellow-600"
                               >
                                 <X size={14} />
                               </button>
@@ -852,12 +852,12 @@ const ManageSlider = () => {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <input type="checkbox" name="isActive" checked={vFormData.isActive} onChange={handleVInputChange} id="v-active" className="w-4 h-4 text-[#FB0500] border-gray-300 rounded focus:ring-[#FB0500]" />
+                <input type="checkbox" name="isActive" checked={vFormData.isActive} onChange={handleVInputChange} id="v-active" className="w-4 h-4 text-[#ba9d25] border-gray-300 rounded focus:ring-[#ba9d25]" />
                 <label htmlFor="v-active" className="text-sm font-semibold text-gray-700">Active (Show in carousel)</label>
               </div>
               <div className="flex gap-3 pt-4">
                 <button type="button" onClick={() => setVShowModal(false)} className="flex-1 px-4 py-2.5 border rounded-xl font-bold text-gray-600 hover:bg-gray-50 transition">Cancel</button>
-                <button type="submit" disabled={vLoading} className="flex-1 px-4 py-2.5 bg-[#FB0500] text-white rounded-xl font-bold hover:shadow-lg transition">
+                <button type="submit" disabled={vLoading} className="flex-1 px-4 py-2.5 bg-[#ba9d25] text-white rounded-xl font-bold hover:shadow-lg transition">
                   {vLoading ? 'Saving...' : vIsEditing ? 'Update Story' : 'Add Story'}
                 </button>
               </div>

@@ -231,7 +231,7 @@ const CourseCategory = () => {
 
         {/* Error Message */}
         {error && (
-          <div className="mb-4 bg-red-50 border-l-4 border-red-500 text-red-700 px-3 sm:px-4 py-2 sm:py-3 rounded shadow-sm">
+          <div className="mb-4 bg-yellow-50 border-l-4 border-yellow-500 text-red-700 px-3 sm:px-4 py-2 sm:py-3 rounded shadow-sm">
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -281,7 +281,7 @@ const CourseCategory = () => {
                       </button>
                       <button
                         onClick={() => handleDelete(category._id)}
-                        className="text-red-600 hover:text-red-900 p-1.5 rounded-lg hover:bg-red-50 transition"
+                        className="text-yellow-600 hover:text-red-900 p-1.5 rounded-lg hover:bg-yellow-50 transition"
                         title="Delete"
                       >
                         <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -347,7 +347,7 @@ const CourseCategory = () => {
                           <div className="flex items-center gap-3">
                             <button
                               onClick={() => handleDelete(category._id)}
-                              className="text-red-600 hover:text-red-900 transition duration-150 inline-flex items-center gap-1"
+                              className="text-yellow-600 hover:text-red-900 transition duration-150 inline-flex items-center gap-1"
                             >
                               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -433,7 +433,7 @@ const CourseCategory = () => {
                   <div className="p-4 sm:p-6 space-y-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Category Name <span className="text-red-500">*</span>
+                        Category Name <span className="text-yellow-500">*</span>
                       </label>
                       <input
                         type="text"

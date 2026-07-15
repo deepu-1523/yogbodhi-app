@@ -4,6 +4,7 @@ import api from '../../services/endpoints';
 import { toast } from 'react-toastify';
 import { useNavigate, Link } from 'react-router-dom';
 import { User, BookOpen, Check, ChevronRight, ChevronLeft, Globe, Apple } from 'lucide-react';
+import Footer from '../mainLayout/Footer';
 
 const StudentRegistration = () => {
   const navigate = useNavigate();
@@ -32,10 +33,11 @@ const StudentRegistration = () => {
   };
 
   return (
-    <div className="h-screen w-full bg-[#f8faff] bg-line-grid flex items-center justify-center p-4 md:p-8 overflow-hidden font-poppins">
+    <div className="min-h-screen w-full bg-[#f8faff] bg-line-grid flex flex-col font-poppins">
 
       {/* Main Container - Sharp & Pro */}
-      <div className="w-full max-w-[1100px] h-full max-h-[720px] bg-white rounded-[40px] border border-gray-100 flex overflow-hidden relative">
+      <div className="flex-grow flex items-center justify-center p-4 md:p-8 overflow-hidden">
+        <div className="w-full max-w-[1100px] min-h-[600px] md:h-[720px] bg-white rounded-[40px] border border-gray-100 flex overflow-hidden relative shadow-xl">
 
         {/* Left Side: Multi-Step Form */}
         <div className="w-full md:w-[45%] p-8 md:p-14 flex flex-col justify-between relative z-10 border-r border-gray-50">
@@ -138,7 +140,7 @@ const StudentRegistration = () => {
                     Continue <ChevronRight size={16} />
                   </button>
                 ) : (
-                  <button type="submit" disabled={loading} className="flex-[2] bg-[#FB0500] text-white py-3.5 rounded-full font-bold hover:bg-red-700 transition-all flex items-center justify-center gap-2 text-xs">
+                  <button type="submit" disabled={loading} className="flex-[2] bg-[#ba9d25] text-white py-3.5 rounded-full font-bold hover:bg-red-700 transition-all flex items-center justify-center gap-2 text-xs">
                     {loading ? 'Processing...' : 'Register Account'} <Check size={16} />
                   </button>
                 )}
@@ -165,7 +167,7 @@ const StudentRegistration = () => {
           />
           <div className="absolute inset-0 bg-[#0a1628]/10" />
 
-          <div className="absolute top-10 right-10 bg-[#ffcf5c] p-4 rounded-2xl border border-yellow-400/50">
+          <div className="absolute top-0 right-0 bg-[#ffcf5c] p-4 rounded-4xl border border-yellow-400/50">
             <p className="text-[10px] font-black uppercase tracking-widest text-yellow-900 mb-1">Scholarship Open</p>
             <p className="text-sm font-bold text-gray-900">Get up to 100% off</p>
           </div>
@@ -181,7 +183,10 @@ const StudentRegistration = () => {
           </div>
         </div>
 
+        </div>
       </div>
+
+      <Footer />
 
       <style>{`
         @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
@@ -190,5 +195,6 @@ const StudentRegistration = () => {
     </div>
   );
 };
+
 
 export default StudentRegistration;

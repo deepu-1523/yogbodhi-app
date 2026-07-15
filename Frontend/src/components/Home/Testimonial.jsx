@@ -4,7 +4,7 @@ import api from '../../services/endpoints';
 import VideoCarousel from './VideoCarousel';
 
 /* alternate red/blue per card */
-const cardAccents = ['#FB0500','#0078FF','#FB0500','#0078FF','#FB0500','#0078FF'];
+const cardAccents = ['#ba9d25', '#a88c21', '#947b1c'];
 
 const TestimonialsPage = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -30,12 +30,12 @@ const TestimonialsPage = () => {
 
   useEffect(() => { GetTestinomial(); }, []);
 
-  if (loading) return <div className="py-20 flex items-center justify-center"><div className="animate-spin rounded-full h-7 w-7 border-b-2 border-[#FB0500]" /></div>;
+  if (loading) return <div className="py-20 flex items-center justify-center"><div className="animate-spin rounded-full h-7 w-7 border-b-2 border-[#ba9d25]" /></div>;
   if (error)   return (
     <div className="py-16 flex items-center justify-center">
       <div className="text-center">
         <p className="text-gray-400 text-sm mb-3">{error}</p>
-        <button onClick={GetTestinomial} className="px-4 py-2 bg-[#FB0500] text-white rounded-lg text-xs hover:opacity-90">Try Again</button>
+        <button onClick={GetTestinomial} className="px-4 py-2 bg-[#ba9d25] text-white rounded-lg text-xs hover:opacity-90">Try Again</button>
       </div>
     </div>
   );
@@ -48,16 +48,16 @@ const TestimonialsPage = () => {
 
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <p className="text-xs font-bold text-[#0078FF] uppercase tracking-widest mb-3">Success Stories</p>
+              <p className="text-xs font-bold text-[#ba9d25] uppercase tracking-widest mb-3">Success Stories</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">What our students say</h2>
             </div>
             <div className="flex gap-8 flex-shrink-0">
               <div className="text-center">
-                <div className="text-2xl font-black text-[#FB0500]">10,000+</div>
+                <div className="text-2xl font-black text-[#ba9d25]">10,000+</div>
                 <div className="text-xs text-gray-400 mt-0.5">Happy Students</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-black text-[#0078FF]">98%</div>
+                <div className="text-2xl font-black text-[#ba9d25]">98%</div>
                 <div className="text-xs text-gray-400 mt-0.5">Success Rate</div>
               </div>
             </div>
@@ -113,10 +113,10 @@ const TestimonialsPage = () => {
       </div>
 
       {/* Video Stories */}
-      <div className="bg-white py-14 px-4 sm:px-6 lg:px-8">
+      <div className="bg-gradient-to-br from-yellow-50 to-green-50 py-14 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8">
-            <p className="text-xs font-bold text-[#FB0500] uppercase tracking-widest mb-3">Watch & Learn</p>
+            <p className="text-xs font-bold text-[#ba9d25] uppercase tracking-widest mb-3">Watch & Learn</p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Success Stories in Action</h2>
           </div>
           <VideoCarousel />

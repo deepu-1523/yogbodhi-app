@@ -192,7 +192,7 @@ const FacultyManagement = () => {
                 </button>
                 <button
                   onClick={() => handleDelete(member._id)}
-                  className="p-2 bg-white/90 backdrop-blur-sm rounded-lg text-red-600 hover:bg-red-600 hover:text-white transition-all shadow-sm"
+                  className="p-2 bg-white/90 backdrop-blur-sm rounded-lg text-yellow-600 hover:bg-yellow-600 hover:text-white transition-all shadow-sm"
                 >
                   <Trash2 className="w-4 h-4" />
                 </button>
@@ -321,7 +321,7 @@ const FacultyManagement = () => {
                           setImagePreview('');
                           setFormData(prev => ({ ...prev, image: null }));
                         }}
-                        className="absolute top-1 right-1 p-1 bg-red-500 text-white rounded-full hover:bg-red-600"
+                        className="absolute top-1 right-1 p-1 bg-yellow-500 text-white rounded-full hover:bg-yellow-600"
                       >
                         <X className="w-3 h-3" />
                       </button>

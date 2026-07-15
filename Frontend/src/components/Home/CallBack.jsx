@@ -44,7 +44,7 @@ const ExpertConsultationForm = () => {
     }
   };
 
-  const inputCls = 'w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#FB0500] focus:border-transparent transition outline-none bg-gray-50 focus:bg-white';
+  const inputCls = 'w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#ba9d25] focus:border-transparent transition outline-none bg-gray-50 focus:bg-white';
   const labelCls = 'block text-xs font-semibold text-gray-600 mb-1.5';
 
   return (
@@ -55,9 +55,9 @@ const ExpertConsultationForm = () => {
 
           {/* Left Info Panel */}
           <div className="lg:w-2/5 lg:sticky lg:top-24">
-            <p className="text-xs font-bold text-[#0078FF] uppercase tracking-widest mb-3">Get in Touch</p>
+            <p className="text-xs font-bold text-[#ba9d25] uppercase tracking-widest mb-3">Get in Touch</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
-              Talk to our <span className="text-[#FB0500]">Expert</span>
+              Talk to our <span className="text-[#ba9d25]">Expert</span>
             </h2>
             <p className="text-sm text-gray-500 mb-8 leading-relaxed">
               Get personalized guidance from our education experts. Fill in your details and we'll reach out to you shortly.
@@ -67,7 +67,7 @@ const ExpertConsultationForm = () => {
             <div className="space-y-4">
               {benefits.map((b) => (
                 <div key={b.title} className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-lg flex-shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-yellow-50 flex items-center justify-center text-lg flex-shrink-0">
                     {b.icon}
                   </div>
                   <div>
@@ -81,11 +81,11 @@ const ExpertConsultationForm = () => {
             {/* Stats */}
             <div className="mt-8 flex gap-8">
               <div>
-                <div className="text-2xl font-bold text-[#FB0500]">10,000+</div>
+                <div className="text-2xl font-bold text-[#ba9d25]">10,000+</div>
                 <div className="text-xs text-gray-400 mt-0.5">Students Counseled</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-[#00BFFE]">98%</div>
+                <div className="text-2xl font-bold text-[#ba9d25]">98%</div>
                 <div className="text-xs text-gray-400 mt-0.5">Satisfaction Rate</div>
               </div>
             </div>
@@ -100,7 +100,7 @@ const ExpertConsultationForm = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className={labelCls}>First Name <span className="text-red-500">*</span></label>
+                    <label className={labelCls}>First Name <span className="text-yellow-500">*</span></label>
                     <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required className={inputCls} placeholder="First name" />
                   </div>
                   <div>
@@ -110,18 +110,18 @@ const ExpertConsultationForm = () => {
                 </div>
 
                 <div>
-                  <label className={labelCls}>Mobile Number <span className="text-red-500">*</span></label>
+                  <label className={labelCls}>Mobile Number <span className="text-yellow-500">*</span></label>
                   <input type="tel" name="mobileNo" value={formData.mobileNo} onChange={handleChange} maxLength="10" required className={inputCls} placeholder="10-digit mobile number" />
                 </div>
 
                 <div>
-                  <label className={labelCls}>Email ID <span className="text-red-500">*</span></label>
+                  <label className={labelCls}>Email ID <span className="text-yellow-500">*</span></label>
                   <input type="email" name="emailId" value={formData.emailId} onChange={handleChange} required className={inputCls} placeholder="your@email.com" />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className={labelCls}>Stream <span className="text-red-500">*</span></label>
+                    <label className={labelCls}>Stream <span className="text-yellow-500">*</span></label>
                     <select name="stream" value={formData.stream} onChange={handleChange} required className={inputCls}>
                       <option value="">Select Stream</option>
                       <option value="science">Science (PCM/PCB)</option>
@@ -131,7 +131,7 @@ const ExpertConsultationForm = () => {
                     </select>
                   </div>
                   <div>
-                    <label className={labelCls}>Class <span className="text-red-500">*</span></label>
+                    <label className={labelCls}>Class <span className="text-yellow-500">*</span></label>
                     <select name="class" value={formData.class} onChange={handleChange} required className={inputCls}>
                       <option value="">Select Class</option>
                       <option value="8th">Class 8th</option>
@@ -146,18 +146,18 @@ const ExpertConsultationForm = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <input type="checkbox" id="terms" required className="mt-0.5 w-4 h-4 accent-[#FB0500] border-gray-300 rounded" />
+                  <input type="checkbox" id="terms" required className="mt-0.5 w-4 h-4 accent-[#ba9d25] border-gray-300 rounded" />
                   <label htmlFor="terms" className="text-xs text-gray-500">
                     By submitting, I agree to receive WhatsApp communication and accept Roots Classes'{' '}
-                    <a href="/termsandconditions" className="text-[#FB0500] hover:underline">T&C</a> &{' '}
-                    <a href="/privacypolicy" className="text-[#FB0500] hover:underline">Privacy Policy</a>.
+                    <a href="/termsandconditions" className="text-[#ba9d25] hover:underline">T&C</a> &{' '}
+                    <a href="/privacypolicy" className="text-[#ba9d25] hover:underline">Privacy Policy</a>.
                   </label>
                 </div>
 
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full py-3 bg-[#FB0500] text-white font-semibold rounded-xl text-sm hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full py-3 bg-gradient-to-r from-[#ba9d25] to-[#a88c21] text-white font-semibold rounded-xl text-sm hover:from-[#a88c21] hover:to-[#947b1c] hover:shadow-lg hover:shadow-yellow-200 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {submitting ? 'Submitting...' : 'Request Callback →'}
                 </button>

@@ -228,8 +228,8 @@ const StudentProfile = () => {
         return (
             <div className="min-h-screen flex items-center justify-center bg-[#F8FAFC]">
                 <div className="max-w-md w-full bg-white p-8 rounded-[32px] shadow-2xl shadow-blue-900/5 text-center">
-                    <div className="w-20 h-20 bg-red-50 rounded-3xl flex items-center justify-center mx-auto mb-6">
-                        <ShieldCheck className="text-red-500" size={40} />
+                    <div className="w-20 h-20 bg-yellow-50 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                        <ShieldCheck className="text-yellow-500" size={40} />
                     </div>
                     <h2 className="text-2xl font-black text-slate-900 mb-2">Session Expired</h2>
                     <p className="text-slate-500 font-medium mb-8">We couldn't retrieve your profile data. Please sign in again to access your dashboard.</p>

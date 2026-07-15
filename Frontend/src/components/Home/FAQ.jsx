@@ -20,14 +20,14 @@ const FAQ = () => {
 
           {/* Left label */}
           <div className="lg:col-span-4 lg:sticky lg:top-24">
-            <p className="text-xs font-bold text-[#0078FF] uppercase tracking-widest mb-3">FAQ</p>
+            <p className="text-xs font-bold text-[#ba9d25] uppercase tracking-widest mb-3">FAQ</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
               Frequently<br />Asked<br />
-              <span className="text-[#FB0500]">Questions</span>
+              <span className="text-[#ba9d25]">Questions</span>
             </h2>
             <p className="text-sm text-gray-400 mt-6 leading-relaxed">
               Everything you need to know before joining. Can't find your answer?{' '}
-              <a href="/contact" className="text-[#FB0500] hover:underline font-medium">Contact us →</a>
+              <a href="/contact" className="text-[#ba9d25] hover:underline font-medium">Contact us →</a>
             </p>
           </div>
 
@@ -39,10 +39,10 @@ const FAQ = () => {
                   onClick={() => setOpen(open === i ? null : i)}
                   className="w-full flex items-center justify-between py-5 text-left group"
                 >
-                  <span className={`text-sm font-semibold pr-8 transition-colors ${open === i ? 'text-[#FB0500]' : 'text-gray-800 group-hover:text-[#FB0500]'}`}>
+                  <span className={`text-sm font-semibold pr-8 transition-colors ${open === i ? 'text-[#ba9d25]' : 'text-gray-800 group-hover:text-[#ba9d25]'}`}>
                     {faq.q}
                   </span>
-                  <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all ${open === i ? 'bg-[#FB0500] rotate-45' : 'bg-gray-100'}`}>
+                  <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all ${open === i ? 'bg-[#ba9d25] rotate-45' : 'bg-gray-100'}`}>
                     <svg className="w-3 h-3" fill="none" stroke={open === i ? 'white' : '#6b7280'} viewBox="0 0 24 24" strokeWidth={3}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
                     </svg>

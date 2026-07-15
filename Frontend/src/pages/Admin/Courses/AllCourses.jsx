@@ -100,7 +100,7 @@ const AllCourses = () => {
     if (status === 'approved') {
       return <span className="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">Approved</span>;
     } else if (status === 'rejected') {
-      return <span className="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">Rejected</span>;
+      return <span className="px-2 py-1 bg-yellow-100 text-red-800 rounded-full text-xs font-medium">Rejected</span>;
     } else {
       return <span className="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">Pending</span>;
     }
@@ -111,11 +111,11 @@ const AllCourses = () => {
   if (error) {
     return (
       <div className="px-4 py-6 sm:py-8">
-        <div className="bg-red-100 border border-red-400 text-red-700 px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base">
+        <div className="bg-yellow-100 border border-yellow-400 text-red-700 px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base">
           <strong>Error:</strong> {error}
           <button
             onClick={GetFullDetails}
-            className="ml-3 sm:ml-4 bg-red-600 text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded hover:bg-red-700 transition text-sm"
+            className="ml-3 sm:ml-4 bg-yellow-600 text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded hover:bg-red-700 transition text-sm"
           >
             Retry
           </button>
@@ -185,7 +185,7 @@ const AllCourses = () => {
                   <span className={`px-2 py-0.5 sm:py-1 rounded-full text-xs capitalize ${
                     course.level === 'beginner' ? 'bg-green-100 text-green-800' :
                     course.level === 'intermediate' ? 'bg-yellow-100 text-yellow-800' :
-                    'bg-red-100 text-red-800'
+                    'bg-yellow-100 text-red-800'
                   }`}>
                     {course.level}
                   </span>
@@ -224,7 +224,7 @@ const AllCourses = () => {
                       <button
                         onClick={() => updateCourseStatus(course._id, 'rejected')}
                         disabled={processingId === course._id}
-                        className="bg-red-50 text-red-700 border border-red-200 px-3 py-1.5 rounded-lg hover:bg-red-100 transition-colors text-xs disabled:opacity-50"
+                        className="bg-yellow-50 text-red-700 border border-yellow-200 px-3 py-1.5 rounded-lg hover:bg-yellow-100 transition-colors text-xs disabled:opacity-50"
                       >
                         {processingId === course._id ? 'Processing...' : 'Reject'}
                       </button>
@@ -273,7 +273,7 @@ const AllCourses = () => {
                       <span className={`px-2 py-1 rounded-full text-xs capitalize ${
                         course.level === 'beginner' ? 'bg-green-100 text-green-800' :
                         course.level === 'intermediate' ? 'bg-yellow-100 text-yellow-800' :
-                        'bg-red-100 text-red-800'
+                        'bg-yellow-100 text-red-800'
                       }`}>
                         {course.level}
                       </span>
@@ -312,7 +312,7 @@ const AllCourses = () => {
                           <button
                             onClick={() => updateCourseStatus(course._id, 'rejected')}
                             disabled={processingId === course._id}
-                            className="bg-red-50 text-red-700 border border-red-200 px-3 py-1.5 rounded-lg hover:bg-red-100 transition-colors text-xs disabled:opacity-50"
+                            className="bg-yellow-50 text-red-700 border border-yellow-200 px-3 py-1.5 rounded-lg hover:bg-yellow-100 transition-colors text-xs disabled:opacity-50"
                           >
                             Reject
                           </button>
@@ -344,7 +344,7 @@ const AllCourses = () => {
                       </span>
                       <span className={`px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-semibold ${
                         selectedCourse.level === 'beginner' ? 'bg-green-500' :
-                        selectedCourse.level === 'intermediate' ? 'bg-yellow-500' : 'bg-red-500'
+                        selectedCourse.level === 'intermediate' ? 'bg-yellow-500' : 'bg-yellow-500'
                       }`}>
                         {selectedCourse.level}
                       </span>

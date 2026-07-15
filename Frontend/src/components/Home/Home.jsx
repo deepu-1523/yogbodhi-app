@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import HeroBanner from './HeroBanner';
 import Classes from './Classes';
 import Testimonial from './Testimonial';
 import CallBack from './CallBack';
@@ -65,71 +66,8 @@ const SliderPage = () => {
 
   return (
     <>
-      {/* Slider */}
-      {slides.length > 0 && (
-        <div
-          className="relative w-full group bg-white sm:px-4 lg:px-6 mt-2"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          <div className="relative aspect-[2/1] md:aspect-[3.5/1] lg:aspect-[4.5/1] w-full overflow-hidden border border-gray-100 bg-slate-50 shadow-lg">
-            {slides.map((slide, idx) => (
-              <div
-                key={slide._id || idx}
-                className={`absolute inset-0 flex h-full w-full items-center justify-center transition-all duration-700 ease-in-out transform ${currentSlide === idx ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
-              >
-                {/* Preserve the full banner image without cropping or stretching. */}
-                <picture className="block h-full w-full">
-                  <source
-                    media="(max-width: 639px)"
-                    srcSet={slide.mobileImage || slide.tabletImage || slide.desktopImage || slide.image}
-                  />
-                  <source
-                    media="(max-width: 1023px)"
-                    srcSet={slide.tabletImage || slide.desktopImage || slide.image}
-                  />
-                  <img
-                    src={slide.desktopImage || slide.image}
-                    alt={slide.title || `Slide ${idx + 1}`}
-                    className="h-full w-full object-contain object-center"
-                  />
-                </picture>
-
-                {/* 2. Optional Gradient Overlay (PW style for readability) */}
-                <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/10 via-transparent to-transparent" />
-              </div>
-            ))}
-
-            {/* Navigation Arrows (PW Style) */}
-            <button
-              onClick={prevSlide}
-              aria-label="Previous slide"
-              className="absolute left-2 top-1/2 z-30 -translate-y-1/2 rounded-full bg-white/80 p-1.5 text-gray-800 shadow-lg backdrop-blur-sm transition-all hover:bg-white sm:left-4 sm:p-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
-            >
-              <ChevronLeft size={22} />
-            </button>
-            <button
-              onClick={nextSlide}
-              aria-label="Next slide"
-              className="absolute right-2 top-1/2 z-30 -translate-y-1/2 rounded-full bg-white/80 p-1.5 text-gray-800 shadow-lg backdrop-blur-sm transition-all hover:bg-white sm:right-4 sm:p-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
-            >
-              <ChevronRight size={22} />
-            </button>
-
-            {/* Pagination Dots (Modern Pill Style) */}
-            <div className="absolute bottom-2 left-0 right-0 z-30 flex justify-center gap-2 sm:bottom-4">
-              {slides.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentSlide(idx)}
-                  aria-label={`Go to slide ${idx + 1}`}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${currentSlide === idx ? 'w-8 bg-indigo-600' : 'w-2 bg-gray-300'}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Hero Banner Section */}
+      <HeroBanner />
 
       {/* Stats Bar */}
       <div className="relative z-20">

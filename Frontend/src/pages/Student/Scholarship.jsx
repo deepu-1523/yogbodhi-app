@@ -13,7 +13,7 @@ const tiers = [
     dark: false,
   },
   {
-    pct: '50%', label: 'Performance', color: '#FB0500', bg: 'bg-red-50', border: 'border-red-100',
+    pct: '50%', label: 'Performance', color: '#ba9d25', bg: 'bg-yellow-50', border: 'border-yellow-100',
     desc: 'Score between 75–89% in the scholarship test',
     perks: ['50% tuition fee waiver', 'Free study material', 'Priority doubt sessions', 'Monthly mentoring'],
     dark: true,
@@ -27,9 +27,9 @@ const tiers = [
 ];
 
 const steps = [
-  { num: '01', title: 'Register Online', desc: 'Fill in the application form below with your details and select your program.', accent: '#FB0500' },
+  { num: '01', title: 'Register Online', desc: 'Fill in the application form below with your details and select your program.', accent: '#ba9d25' },
   { num: '02', title: 'Appear for Test', desc: 'Attend the Roots Scholarship Test (RST) — conducted online or at our Ludhiana center.', accent: '#0078FF' },
-  { num: '03', title: 'Get Your Result', desc: 'Results announced within 3 working days. Check your email for the scorecard.', accent: '#FB0500' },
+  { num: '03', title: 'Get Your Result', desc: 'Results announced within 3 working days. Check your email for the scorecard.', accent: '#ba9d25' },
   { num: '04', title: 'Confirm Admission', desc: 'Finalise enrollment with the applicable scholarship discount and join the batch.', accent: '#0078FF' },
 ];
 
@@ -163,18 +163,18 @@ const ScholarshipForm = () => {
           backgroundSize: '24px 24px'
         }} />
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#0078FF]/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#FB0500]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#ba9d25]/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
             <div className="flex-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-50 border border-gray-100 mb-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FB0500] animate-pulse"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#ba9d25] animate-pulse"></span>
                 <p className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Scholarship 2025</p>
               </div>
               <h1 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight">
                 Unlock Up To<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB0500] via-[#F1C40F] to-[#28A745]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ba9d25] via-[#F1C40F] to-[#28A745]">
                   100% Scholarship
                 </span>
               </h1>
@@ -182,7 +182,7 @@ const ScholarshipForm = () => {
 
             <div className="flex gap-10 md:gap-14 md:px-10 md:border-x border-gray-100">
               <div>
-                <span className="text-xl md:text-2xl font-black text-[#FB0500]">2,000+</span>
+                <span className="text-xl md:text-2xl font-black text-[#ba9d25]">2,000+</span>
                 <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-0.5">Awarded</p>
               </div>
               <div>
@@ -196,7 +196,7 @@ const ScholarshipForm = () => {
             </div>
 
             <div className="md:w-64">
-              <a href="#apply-form" className="group flex items-center justify-between w-full px-5 py-3 bg-gray-600 text-white rounded-xl text-sm font-bold hover:bg-[#FD6003] transition-all shadow-lg shadow-gray-200">
+              <a href="#apply-form" className="group flex items-center justify-between w-full px-5 py-3 bg-red-400 text-white rounded-xl text-sm font-bold hover:bg-[#ba9d25] transition-all shadow-lg shadow-gray-200">
                 Apply Now
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -213,18 +213,18 @@ const ScholarshipForm = () => {
           <div className="text-center mb-10">
             <p className="text-xs font-bold text-[#0078FF] uppercase tracking-widest mb-3">Scholarship Tiers</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              What can you <span className="text-[#FB0500]">win?</span>
+              What can you <span className="text-[#ba9d25]">win?</span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {tiers.map((t, i) => (
               <div key={t.pct}
-                className={`relative rounded-2xl overflow-hidden border flex flex-col bg-white ${t.border} transition-all hover:shadow-lg ${i === 1 ? 'md:-mt-4 md:mb-4 ring-2 ring-[#FB0500]/10' : ''
+                className={`relative rounded-2xl overflow-hidden border flex flex-col bg-white ${t.border} transition-all hover:shadow-lg ${i === 1 ? 'md:-mt-4 md:mb-4 ring-2 ring-[#ba9d25]/10' : ''
                   }`}
               >
                 {i === 1 && (
-                  <div className="bg-[#FB0500] text-white text-center py-1.5 text-[10px] font-black uppercase tracking-[0.2em]">
+                  <div className="bg-[#ba9d25] text-white text-center py-1.5 text-[10px] font-black uppercase tracking-[0.2em]">
                     Most Popular
                   </div>
                 )}
@@ -273,10 +273,10 @@ const ScholarshipForm = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-4">
-              <p className="text-xs font-bold text-[#FB0500] uppercase tracking-widest mb-3">Process</p>
+              <p className="text-xs font-bold text-[#ba9d25] uppercase tracking-widest mb-3">Process</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
                 How to apply in
-                <span className="block text-[#FB0500] mt-1">4 simple steps</span>
+                <span className="block text-[#ba9d25] mt-1">4 simple steps</span>
               </h2>
               <p className="text-sm text-gray-400 mt-5 leading-relaxed">
                 The entire process takes less than 10 minutes. No paperwork — everything is online.
@@ -306,7 +306,7 @@ const ScholarshipForm = () => {
           <div className="text-center mb-10">
             <p className="text-xs font-bold text-[#0078FF] uppercase tracking-widest mb-3">Eligibility</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Who can <span className="text-[#FB0500]">apply?</span>
+              Who can <span className="text-[#ba9d25]">apply?</span>
             </h2>
           </div>
 
@@ -336,10 +336,10 @@ const ScholarshipForm = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             {/* Left info */}
             <div className="lg:col-span-4 lg:sticky lg:top-28">
-              <p className="text-xs font-bold text-[#FB0500] uppercase tracking-widest mb-3">Apply Now</p>
+              <p className="text-xs font-bold text-[#ba9d25] uppercase tracking-widest mb-3">Apply Now</p>
               <h2 className="text-3xl font-bold text-gray-900 leading-tight">
                 Start your<br />
-                <span className="text-[#FB0500]">scholarship</span><br />journey
+                <span className="text-[#ba9d25]">scholarship</span><br />journey
               </h2>
               <p className="text-sm text-gray-400 mt-5 leading-relaxed">
                 Fill the form — our team will contact you within 24 hours with test details and your admit card.
@@ -347,10 +347,10 @@ const ScholarshipForm = () => {
 
               <div className="mt-8 space-y-0">
                 {[
-                  { label: 'Application', date: 'Open Now', col: '#FB0500' },
+                  { label: 'Application', date: 'Open Now', col: '#ba9d25' },
                   { label: 'RST Exam', date: 'Every Saturday', col: '#0078FF' },
                   { label: 'Results', date: 'Within 3 days', col: '#08B100' },
-                  { label: 'Enrollment', date: 'Anytime after', col: '#FB0500' },
+                  { label: 'Enrollment', date: 'Anytime after', col: '#ba9d25' },
                 ].map((t, i, arr) => (
                   <div key={t.label} className="flex items-start gap-4">
                     <div className="flex flex-col items-center">
@@ -370,9 +370,9 @@ const ScholarshipForm = () => {
             <div className="lg:col-span-8">
               <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
                 <div className="bg-gray-50 border-b border-gray-100 px-8 py-6 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-[#FB0500]/5 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-[#ba9d25]/5 rounded-full blur-3xl pointer-events-none" />
                   <div className="relative">
-                    <p className="text-xs font-bold text-[#FB0500] uppercase tracking-widest mb-1">RST Application</p>
+                    <p className="text-xs font-bold text-[#ba9d25] uppercase tracking-widest mb-1">RST Application</p>
                     <h3 className="text-xl font-bold text-gray-900">Roots Scholarship Test</h3>
                     <p className="text-gray-500 text-xs mt-1">Free registration · Takes 3 minutes</p>
                   </div>
@@ -381,7 +381,7 @@ const ScholarshipForm = () => {
                 <form onSubmit={handleSubmit} className="p-8 space-y-6">
                   {loadingData && (
                     <div className="flex flex-col items-center justify-center py-12 gap-3">
-                      <Loader2 className="w-8 h-8 text-[#FB0500] animate-spin" />
+                      <Loader2 className="w-8 h-8 text-[#ba9d25] animate-spin" />
                       <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">Fetching your data...</p>
                     </div>
                   )}
@@ -390,14 +390,14 @@ const ScholarshipForm = () => {
                     <>
                       {/* Program selection */}
                       <div>
-                        <label className={labelCls}>Select Program <span className="text-[#FB0500]">*</span></label>
+                        <label className={labelCls}>Select Program <span className="text-[#ba9d25]">*</span></label>
                         <div className="grid grid-cols-3 gap-3">
                           {['Foundation', 'Medical', 'Engineering'].map(p => (
                             <button key={p} type="button"
                               onClick={() => setFormData(prev => ({ ...prev, program: p }))}
                               className={`py-3 rounded-xl text-sm font-bold border-2 transition-all ${formData.program === p
-                                ? 'bg-[#FB0500] text-white border-[#FB0500] shadow-sm shadow-red-100'
-                                : 'bg-white text-gray-600 border-gray-200 hover:border-[#FB0500]/40'
+                                ? 'bg-[#ba9d25] text-white border-[#ba9d25] shadow-sm shadow-yellow-100'
+                                : 'bg-white text-gray-600 border-gray-200 hover:border-[#ba9d25]/40'
                                 }`}
                             >
                               {p}
@@ -409,7 +409,7 @@ const ScholarshipForm = () => {
                       {/* Class + Looking For */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
-                          <label className={labelCls}>Your Class <span className="text-[#FB0500]">*</span></label>
+                          <label className={labelCls}>Your Class <span className="text-[#ba9d25]">*</span></label>
                           <select
                             name="studentClass"
                             value={formData.studentClass}
@@ -427,7 +427,7 @@ const ScholarshipForm = () => {
                           </select>
                         </div>
                         <div>
-                          <label className={labelCls}>Looking For <span className="text-[#FB0500]">*</span></label>
+                          <label className={labelCls}>Looking For <span className="text-[#ba9d25]">*</span></label>
                           <select name="lookingForCategory" value={formData.lookingForCategory} onChange={handleChange} required className={selectCls}>
                             <option value="">Select option</option>
                             <option value="scholarship">Scholarship Programs</option>
@@ -441,7 +441,7 @@ const ScholarshipForm = () => {
                       {/* Email + Phone */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
-                          <label className={labelCls}>Email ID <span className="text-[#FB0500]">*</span></label>
+                          <label className={labelCls}>Email ID <span className="text-[#ba9d25]">*</span></label>
                           <input
                             type="email"
                             name="email"
@@ -454,7 +454,7 @@ const ScholarshipForm = () => {
                           />
                         </div>
                         <div>
-                          <label className={labelCls}>Phone Number <span className="text-[#FB0500]">*</span></label>
+                          <label className={labelCls}>Phone Number <span className="text-[#ba9d25]">*</span></label>
                           <input
                             type="tel"
                             name="phone"
@@ -471,10 +471,10 @@ const ScholarshipForm = () => {
 
                       {/* Terms */}
                       <div className="flex items-start gap-3 py-2">
-                        <input type="checkbox" id="sch-terms" required className="mt-0.5 w-4 h-4 accent-[#FB0500]" />
+                        <input type="checkbox" id="sch-terms" required className="mt-0.5 w-4 h-4 accent-[#ba9d25]" />
                         <label htmlFor="sch-terms" className="text-xs text-gray-500 leading-relaxed">
                           I agree to receive test information and scholarship updates via WhatsApp/Email. I accept Roots Classes{' '}
-                          <a href="/termsandconditions" className="text-[#FB0500] hover:underline">Terms & Conditions</a>.
+                          <a href="/termsandconditions" className="text-[#ba9d25] hover:underline">Terms & Conditions</a>.
                         </label>
                       </div>
 
@@ -482,7 +482,7 @@ const ScholarshipForm = () => {
                       <button
                         type="submit"
                         disabled={submitting}
-                        className="w-full py-4 bg-[#FB0500] text-white font-black rounded-xl text-base hover:opacity-90 transition flex items-center justify-center gap-2 disabled:bg-gray-400"
+                        className="w-full py-4 bg-[#ba9d25] text-white font-black rounded-xl text-base hover:opacity-90 transition flex items-center justify-center gap-2 disabled:bg-gray-400"
                       >
                         {submitting ? (
                           <>
@@ -519,12 +519,12 @@ const ScholarshipForm = () => {
         <div className="relative max-w-3xl mx-auto text-center">
           <p className="text-xs font-bold text-[#0078FF] uppercase tracking-[0.2em] mb-3">Still Have Questions?</p>
           <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-3 leading-tight">
-            Talk to our scholarship counselor — <span className="text-[#FB0500]">it's free</span>
+            Talk to our scholarship counselor — <span className="text-[#ba9d25]">it's free</span>
           </h3>
           <p className="text-gray-500 text-sm mb-8 leading-relaxed">Call, WhatsApp, or visit us at Ludhiana. We're here to help you navigate your scholarship options and batch details.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+919877515330"
-              className="px-8 py-3.5 bg-[#FB0500] text-white font-black rounded-xl text-sm hover:opacity-90 transition-all shadow-lg shadow-red-100 flex items-center justify-center gap-2">
+              className="px-8 py-3.5 bg-[#ba9d25] text-white font-black rounded-xl text-sm hover:opacity-90 transition-all shadow-lg shadow-yellow-100 flex items-center justify-center gap-2">
               <span>📞</span> Call Now: +91 98775-15330
             </a>
             <a href="https://wa.me/919877515330" target="_blank" rel="noopener noreferrer"

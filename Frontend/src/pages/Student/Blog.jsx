@@ -36,7 +36,7 @@ const BlogCard = ({ blog, onClick }) => (
 
     <div className="p-6 flex flex-col flex-1">
       <div className="flex items-center gap-4 text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">
-        <span className="flex items-center gap-1.5"><Calendar size={12} className="text-[#FB0500]" /> {formatDate(blog.createdAt)}</span>
+        <span className="flex items-center gap-1.5"><Calendar size={12} className="text-[#ba9d25]" /> {formatDate(blog.createdAt)}</span>
         <span className="flex items-center gap-1.5"><Clock size={12} className="text-[#0078FF]" /> 5 min read</span>
       </div>
 
@@ -50,7 +50,7 @@ const BlogCard = ({ blog, onClick }) => (
 
       <div className="pt-4 border-t border-gray-50 flex items-center justify-between">
         <span className="text-xs font-bold text-gray-900 flex items-center gap-1 group-hover:gap-2 transition-all">
-          Read Article <ChevronRight size={14} className="text-[#FB0500]" />
+          Read Article <ChevronRight size={14} className="text-[#ba9d25]" />
         </span>
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center text-gray-400">
@@ -71,7 +71,7 @@ const BlogDetail = ({ blog, onClose }) => {
       <div className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl flex flex-col animate-slideUp">
         <div className="p-4 border-b border-gray-100 flex justify-between items-center bg-white sticky top-0 z-10">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#FB0500]" />
+            <span className="w-2 h-2 rounded-full bg-[#ba9d25]" />
             <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Root Insights</span>
           </div>
           <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-400 hover:text-gray-900">
@@ -87,7 +87,7 @@ const BlogDetail = ({ blog, onClose }) => {
 
           <div className="px-6 md:px-16 py-10">
             <div className="flex items-center gap-6 mb-6 text-xs font-bold text-gray-400 uppercase tracking-widest">
-              <span className="px-3 py-1 bg-red-50 text-[#FB0500] rounded-lg">{blog.category || 'Education'}</span>
+              <span className="px-3 py-1 bg-yellow-50 text-[#ba9d25] rounded-lg">{blog.category || 'Education'}</span>
               <span>{formatDate(blog.createdAt)}</span>
               <span>By {blog.author || 'Root Faculty'}</span>
             </div>
@@ -148,7 +148,7 @@ const Blog = () => {
       {/* Refined Header */}
       <section className="bg-gray-50 border-b border-gray-100 pt-32 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-xs font-bold text-[#FB0500] uppercase tracking-[0.3em] mb-4">The Roots Blog</p>
+          <p className="text-xs font-bold text-[#ba9d25] uppercase tracking-[0.3em] mb-4">The Roots Blog</p>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Expert Insights & <span className="text-[#0078FF]">Guidance</span></h1>
           <p className="text-gray-500 max-w-2xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
             Stay updated with the latest in competitive exams, effective study techniques, and success stories from our top performers.
@@ -203,7 +203,7 @@ const Blog = () => {
 
       {/* Footer CTA — Light & Sleek */}
       <section className="bg-dot-grid py-24 px-4">
-        <div className="max-w-4xl mx-auto bg-[#F8F9FA] rounded-[2.5rem] p-10 md:p-16 text-center relative overflow-hidden border border-red-100 shadow-sm">
+        <div className="max-w-4xl mx-auto bg-[#F8F9FA] rounded-[2.5rem] p-10 md:p-16 text-center relative overflow-hidden border border-yellow-100 shadow-sm">
 
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 relative z-10">Don't miss a beat.</h2>
           <p className="text-gray-500 mb-8 max-w-md mx-auto text-sm relative z-10 font-medium">Subscribe to our newsletter and get expert exam tips delivered straight to your inbox.</p>

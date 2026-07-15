@@ -515,7 +515,7 @@
 // //                                                         </button>
 // //                                                         <button
 // //                                                             onClick={() => handleDelete(course.id)}
-// //                                                             className="text-red-600 hover:text-red-900 transition-colors"
+// //                                                             className="text-yellow-600 hover:text-red-900 transition-colors"
 // //                                                             title="Delete class"
 // //                                                         >
 // //                                                             <Trash2 className="w-5 h-5" />
@@ -1293,7 +1293,7 @@
 //                                                         </button>
 //                                                         <button
 //                                                             onClick={() => handleDelete(course.id)}
-//                                                             className="text-red-600 hover:text-red-900 transition-colors p-1"
+//                                                             className="text-yellow-600 hover:text-red-900 transition-colors p-1"
 //                                                             title="Delete class"
 //                                                         >
 //                                                             <Trash2 className="w-4 h-4 sm:w-5 sm:h-5" />

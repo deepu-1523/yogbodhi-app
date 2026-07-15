@@ -134,7 +134,7 @@ const AllCourse = () => {
           <Icon className={color.replace('bg-', 'text-')} size={22} />
         </div>
         {trend && (
-          <span className={`text-xs font-medium px-2 py-1 rounded-full ${trend > 0 ? 'bg-green-50 text-green-600' : 'bg-red-50 text-red-600'}`}>
+          <span className={`text-xs font-medium px-2 py-1 rounded-full ${trend > 0 ? 'bg-green-50 text-green-600' : 'bg-yellow-50 text-yellow-600'}`}>
             {trend > 0 ? '+' : ''}{trend}%
           </span>
         )}

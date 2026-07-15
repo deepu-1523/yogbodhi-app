@@ -86,47 +86,43 @@ const Navbar = () => {
       {/* Announcement bar (Glassmorphism Light) */}
       <div className="relative overflow-hidden bg-[#fdfdfd]/80 backdrop-blur-md border-b border-gray-200/50 py-1.5 px-4 text-center">
         {/* Subtle decorative color accents */}
-        <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-[#FB0500]/5 to-[#FB0500]/1 pointer-events-none" />
-        <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-[#0078FF]/5 to-[#0078FF]/1 pointer-events-none" />
+        <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-[#ba9d25]/5 to-[#ba9d25]/1 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-[#ba9d25]/5 to-[#ba9d25]/1 pointer-events-none" />
 
         <div className="relative z-10 flex items-center justify-center gap-2 text-[10px] sm:text-xs tracking-wide">
-          <span className="flex items-center gap-1.5 font-bold text-gray-700 bg-[#FEF2F2] px-2.5 py-0.5 rounded-full border border-red-100/50">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FB0500] animate-pulse"></span>
+          <span className="flex items-center gap-1.5 font-bold text-gray-700 bg-[#FEF2F2] px-2.5 py-0.5 rounded-full border border-yellow-100/50">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#ba9d25] animate-pulse"></span>
             Admissions open for 2025-26 batch
           </span>
           <span className="text-gray-300 hidden sm:inline">|</span>
           <Link to="/scholarship" className="group flex items-center gap-1 font-black">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0078FF] to-[#28A745] group-hover:from-[#FB0500] group-hover:to-[#FB0500] transition-all">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ba9d25] to-[#a88c21] group-hover:from-[#a88c21] group-hover:to-[#ba9d25] transition-all">
               Apply for 100% Scholarship
             </span>
-            <span className="text-[#28A745] group-hover:translate-x-0.5 transition-transform">→</span>
+            <span className="text-[#ba9d25] group-hover:translate-x-0.5 transition-transform">→</span>
           </Link>
         </div>
       </div>
 
       {/* Main Navbar */}
-      <nav className={`bg-white/95 backdrop-blur-md transition-shadow duration-200 ${scrolled ? 'shadow-[0_1px_20px_rgba(0,0,0,0.08)]' : 'border-b border-gray-100'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+      <nav className={`bg-white/70 backdrop-blur-md transition-shadow duration-200 ${scrolled ? 'shadow-[10_1px_240px_rgba(0,0,0,0.08)]' : 'border-b border-gray-100'}`}>
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-2">
+          <div className="flex justify-between items-center h-18">
 
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2.5 flex-shrink-0">
-              <img src="/logo.svg" alt="Roots Classes" className="h-9 w-auto" />
-              <div className="leading-tight">
-                <span className="text-lg font-black text-[#FB0500] tracking-tight">Roots</span>
-                <span className="text-lg font-black text-[#0a0a0a] tracking-tight"> Classes</span>
-              </div>
+            <Link to="/" className="flex items-center flex-shrink-0">
+              <img src="./assets/yogbodhi.png" alt="Roots Classes" className="h-15 w-auto ml-6" />
             </Link>
 
             {/* Desktop nav */}
-            <div className="hidden md:flex items-center gap-1">
+            <div className="hidden md:flex items-center gap-3">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${isActive(item.path)
-                    ? 'text-[#FB0500] bg-red-50'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isActive(item.path)
+                    ? 'text-[#ba9d25] bg-yellow-50 shadow-lg'
+                    : 'text-gray-600 hover:text-[#ba9d25] hover:bg-yellow-50/50 hover:shadow-lg'
                     }`}
                 >
                   {item.name}
@@ -142,20 +138,20 @@ const Navbar = () => {
                   <div className="relative" ref={dropdownRef}>
                     <button
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className="flex items-center gap-2 px-3 py-2 rounded-xl border border-gray-200 hover:border-gray-300 bg-white transition-colors text-sm"
+                      className="flex items-center gap-2 px-3 py-2 rounded-xl border border-gray-200 hover:border-gray-300 bg-white transition-colors text-sm cursor-pointer"
                     >
-                      <div className="w-6 h-6 rounded-full bg-[#FB0500] flex items-center justify-center flex-shrink-0">
+                      <div className="w-6 h-6 rounded-full bg-[#ba9d25] flex items-center justify-center flex-shrink-0 shadow-md shadow-yellow-200">
                         <User size={13} className="text-white" />
                       </div>
-                      <span className="text-gray-700 font-medium max-w-[120px] truncate">{getName()}</span>
-                      <ChevronDown size={14} className={`text-gray-400 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                      <span className="text-gray-700 font-medium max-w-[120px] truncate group-hover:text-[#ba9d25] transition-colors">{getName()}</span>
+                      <ChevronDown size={14} className={`text-gray-400 transition-transform ${isDropdownOpen ? 'rotate-180 text-[#ba9d25]' : 'group-hover:text-[#ba9d25]'}`} />
                     </button>
 
                     {isDropdownOpen && (
                       <div className="absolute right-0 mt-2 w-60 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
                         <div className="px-4 py-3 border-b border-gray-100">
                           <div className="flex items-center gap-3">
-                            <div className="w-9 h-9 bg-[#FB0500] rounded-full flex items-center justify-center">
+                            <div className="w-9 h-9 bg-[#ba9d25] rounded-full flex items-center justify-center">
                               <User size={16} className="text-white" />
                             </div>
                             <div className="min-w-0">
@@ -167,18 +163,18 @@ const Navbar = () => {
                         <div className="py-1">
                           {isAdminOrInstructor() && (
                             <button onClick={() => { navigate('/admin/'); setIsDropdownOpen(false); }}
-                              className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+                              className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors cursor-pointer">
                               <LayoutDashboard size={16} className="text-gray-400" />Dashboard
                             </button>
                           )}
                           {isStudent() && (
                             <>
                               <button onClick={() => { navigate('/stdprofile'); setIsDropdownOpen(false); }}
-                                className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+                                className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors cursor-pointer">
                                 <UserCircle size={16} className="text-gray-400" />My Profile
                               </button>
                               <button onClick={() => { navigate('/purchescourse'); setIsDropdownOpen(false); }}
-                                className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+                                className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors cursor-pointer">
                                 <SiCoursera size={16} className="text-gray-400" />My Courses
                               </button>
                             </>
@@ -186,7 +182,7 @@ const Navbar = () => {
                         </div>
                         <div className="border-t border-gray-100 pt-1">
                           <button onClick={handleLogout}
-                            className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors">
+                            className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-yellow-600 hover:bg-yellow-50 transition-colors cursor-pointer">
                             <LogOut size={16} />Logout
                           </button>
                         </div>
@@ -197,12 +193,12 @@ const Navbar = () => {
               ) : (
                 <div className="flex items-center gap-3">
                   <Link to="/stdlogin">
-                    <button className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900 border border-gray-200 rounded-xl hover:border-gray-300 transition-colors">
+                    <button className="px-5 py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 rounded-xl hover:border-[#ba9d25] hover:bg-[#ba9d25] transition-all duration-300 cursor-pointer bg-green-500 text-white">
                       Login
                     </button>
                   </Link>
                   <Link to="/register">
-                    <button className="px-4 py-2 text-sm font-semibold text-white bg-[#0078FF] hover:bg-[#0066DD] rounded-xl transition-colors shadow-sm shadow-blue-200">
+                    <button className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-[#ba9d28] to-[#a88c21] hover:from-[#a88c21] hover:to-[#947b1c] rounded-xl transition-all duration-300 shadow-md shadow-yellow-200 hover:shadow-lg hover:shadow-yellow-300 hover:-translate-y-0.5 cursor-pointer">
                       Sign Up Free
                     </button>
                   </Link>
@@ -213,7 +209,7 @@ const Navbar = () => {
             {/* Mobile toggle */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+              className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer"
             >
               {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -227,7 +223,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <Link key={item.name} to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${isActive(item.path) ? 'text-[#FB0500] bg-red-50' : 'text-gray-600 hover:bg-gray-50'
+                  className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${isActive(item.path) ? 'text-[#ba9d25] bg-yellow-50' : 'text-gray-600 hover:bg-gray-50'
                     }`}
                 >
                   {item.name}
@@ -238,7 +234,7 @@ const Navbar = () => {
                 {isLoggedIn ? (
                   <div className="space-y-1">
                     <div className="flex items-center gap-3 px-4 py-2">
-                      <div className="w-8 h-8 bg-[#FB0500] rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-[#ba9d25] rounded-full flex items-center justify-center">
                         <User size={14} className="text-white" />
                       </div>
                       <div>
@@ -261,17 +257,17 @@ const Navbar = () => {
                         </Link>
                       </>
                     )}
-                    <button onClick={handleLogout} className="flex items-center gap-3 w-full px-4 py-2.5 rounded-xl text-sm text-red-600 hover:bg-red-50">
+                    <button onClick={handleLogout} className="flex items-center gap-3 w-full px-4 py-2.5 rounded-xl text-sm text-yellow-600 hover:bg-yellow-50 cursor-pointer">
                       <LogOut size={16} />Logout
                     </button>
                   </div>
                 ) : (
                   <div className="grid grid-cols-2 gap-3 px-1">
                     <Link to="/stdlogin" onClick={() => setIsMenuOpen(false)}>
-                      <button className="w-full py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 rounded-xl">Login</button>
+                      <button className="w-full py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 hover:border-[#ba9d25] hover:text-[#ba9d25] hover:bg-yellow-50 rounded-xl cursor-pointer transition-all">Login</button>
                     </Link>
                     <Link to="/register" onClick={() => setIsMenuOpen(false)}>
-                      <button className="w-full py-2.5 text-sm font-semibold text-white bg-[#0078FF] rounded-xl">Sign Up Free</button>
+                      <button className="w-full py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-[#ba9d25] to-[#a88c21] hover:from-[#a88c21] hover:to-[#947b1c] shadow-md shadow-yellow-200 rounded-xl cursor-pointer transition-all">Sign Up Free</button>
                     </Link>
                   </div>
                 )}

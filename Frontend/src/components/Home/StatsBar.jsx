@@ -1,14 +1,14 @@
 import React from 'react';
 
 const stats = [
-  { value: '10,000+', label: 'Students Enrolled', color: '#FB0500' }, // Red
-  { value: '98%', label: 'Selection Rate', color: '#0078FF' }, // Blue
-  { value: '50+', label: 'Expert Faculty', color: '#28A745' }, // Green
+  { value: '10,000+', label: 'Students Enrolled', color: '#ba9d25' }, // Red
+  { value: '98%', label: 'Selection Rate', color: '#ba9d25' }, // Red
+  { value: '50+', label: 'Expert Faculty', color: '#ba9d25' }, // Red
   { value: '10+', label: 'Years of Excellence', color: '#F1C40F' }, // Yellow
 ];
 
 const StatsBar = () => (
-  <div className="relative py-10 bg-white border-b border-gray-100 shadow-sm overflow-hidden">
+  <div className="relative py-10 bg-gradient-to-br from-yellow-50 to-green-50 border-b border-yellow-100 shadow-sm overflow-hidden">
     {/* Subtle Background Pattern */}
     <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:20px_20px]"></div>
     

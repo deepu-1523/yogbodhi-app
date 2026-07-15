@@ -10,7 +10,7 @@ const Toast = ({ message, type, onClose }) => {
     return () => clearTimeout(timer);
   }, [onClose]);
 
-  const bgColor = type === 'success' ? 'bg-green-500' : type === 'error' ? 'bg-red-500' : 'bg-blue-500';
+  const bgColor = type === 'success' ? 'bg-green-500' : type === 'error' ? 'bg-yellow-500' : 'bg-blue-500';
   return (
     <div className={`fixed top-5 right-5 z-50 ${bgColor} text-white px-6 py-3 rounded-lg shadow-lg transition-all duration-300`}>
       {message}
@@ -243,7 +243,7 @@ const ScholarshipResult = () => {
     if (result.status === 'rejected') {
       return (
         <div>
-          <span className="px-3 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">❌ Rejected</span>
+          <span className="px-3 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-red-800">❌ Rejected</span>
           <p className="text-xs text-blue-500 mt-0.5">📧 Email sent</p>
         </div>
       );
@@ -272,7 +272,7 @@ const ScholarshipResult = () => {
   if (loading) return <Loader message="Loading Scholarship Data..." />;
   if (error) return (
     <div className="flex justify-center items-center min-h-screen">
-      <div className="bg-red-50 p-6 rounded shadow text-red-600">{error} <button onClick={fetchAllData} className="ml-4 underline">Retry</button></div>
+      <div className="bg-yellow-50 p-6 rounded shadow text-yellow-600">{error} <button onClick={fetchAllData} className="ml-4 underline">Retry</button></div>
     </div>
   );
 
@@ -288,7 +288,7 @@ const ScholarshipResult = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded shadow p-6"><div className="flex justify-between"><div><p className="text-gray-500">Total</p><p className="text-2xl font-bold">{stats.total}</p></div><div className="bg-blue-100 p-3 rounded-full">📄</div></div></div>
           <div className="bg-white rounded shadow p-6"><div className="flex justify-between"><div><p className="text-gray-500">Approved</p><p className="text-2xl font-bold text-green-600">{stats.approved}</p></div><div className="bg-green-100 p-3 rounded-full">✅</div></div></div>
-          <div className="bg-white rounded shadow p-6"><div className="flex justify-between"><div><p className="text-gray-500">Rejected</p><p className="text-2xl font-bold text-red-600">{stats.rejected}</p></div><div className="bg-red-100 p-3 rounded-full">❌</div></div></div>
+          <div className="bg-white rounded shadow p-6"><div className="flex justify-between"><div><p className="text-gray-500">Rejected</p><p className="text-2xl font-bold text-yellow-600">{stats.rejected}</p></div><div className="bg-yellow-100 p-3 rounded-full">❌</div></div></div>
           <div className="bg-white rounded shadow p-6"><div className="flex justify-between"><div><p className="text-gray-500">Pending</p><p className="text-2xl font-bold text-yellow-600">{stats.pending}</p></div><div className="bg-yellow-100 p-3 rounded-full">⏳</div></div></div>
         </div>
 
@@ -297,7 +297,7 @@ const ScholarshipResult = () => {
           <input type="text" placeholder="🔍 Search student..." className="flex-1 border rounded px-4 py-2" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
           <div className="flex gap-2">
             {['all', 'pending', 'approved', 'rejected'].map(status => (
-              <button key={status} onClick={() => setFilterStatus(status)} className={`px-4 py-2 rounded ${filterStatus === status ? (status === 'approved' ? 'bg-green-600 text-white' : status === 'rejected' ? 'bg-red-600 text-white' : status === 'pending' ? 'bg-yellow-600 text-white' : 'bg-blue-600 text-white') : 'bg-gray-100'}`}>{status.charAt(0).toUpperCase() + status.slice(1)}</button>
+              <button key={status} onClick={() => setFilterStatus(status)} className={`px-4 py-2 rounded ${filterStatus === status ? (status === 'approved' ? 'bg-green-600 text-white' : status === 'rejected' ? 'bg-yellow-600 text-white' : status === 'pending' ? 'bg-yellow-600 text-white' : 'bg-blue-600 text-white') : 'bg-gray-100'}`}>{status.charAt(0).toUpperCase() + status.slice(1)}</button>
             ))}
           </div>
         </div>
@@ -321,12 +321,12 @@ const ScholarshipResult = () => {
                     {result.status === 'pending' && result.isEligible && !result.isProcessed ? (
                       <div className="flex gap-2">
                         <button onClick={() => openScholarshipModal(result)} disabled={actionLoading === result._id} className="px-3 py-1 bg-green-600 text-white rounded disabled:opacity-50">✅ Grant</button>
-                        <button onClick={() => rejectScholarship(result)} disabled={actionLoading === result._id} className="px-3 py-1 bg-red-600 text-white rounded disabled:opacity-50">❌ Reject</button>
+                        <button onClick={() => rejectScholarship(result)} disabled={actionLoading === result._id} className="px-3 py-1 bg-yellow-600 text-white rounded disabled:opacity-50">❌ Reject</button>
                       </div>
                     ) : result.status === 'approved' ? (
                       <span className="text-green-600 text-sm">{result.discount || 50}% Discount</span>
                     ) : result.status === 'rejected' ? (
-                      <span className="text-red-600 text-sm">Rejected</span>
+                      <span className="text-yellow-600 text-sm">Rejected</span>
                     ) : <span className="text-gray-400">—</span>}
                   </td>
                 </tr>
@@ -346,9 +346,9 @@ const ScholarshipResult = () => {
                 <div><label>Discount (%)</label><input type="number" min="0" max="100" value={scholarshipForm.discount} onChange={e => setScholarshipForm({...scholarshipForm, discount: +e.target.value})} className="w-full border rounded px-3 py-2" /></div>
                 <div><label>Valid From</label><input type="date" value={scholarshipForm.validFrom} onChange={e => setScholarshipForm({...scholarshipForm, validFrom: e.target.value})} className="w-full border rounded px-3 py-2" /></div>
                 <div><label>Valid Until</label><input type="date" value={scholarshipForm.validUntil} onChange={e => setScholarshipForm({...scholarshipForm, validUntil: e.target.value})} className="w-full border rounded px-3 py-2" /></div>
-                {formErrors.discount && <p className="text-red-500 text-sm">{formErrors.discount}</p>}
-                {formErrors.validFrom && <p className="text-red-500 text-sm">{formErrors.validFrom}</p>}
-                {formErrors.validUntil && <p className="text-red-500 text-sm">{formErrors.validUntil}</p>}
+                {formErrors.discount && <p className="text-yellow-500 text-sm">{formErrors.discount}</p>}
+                {formErrors.validFrom && <p className="text-yellow-500 text-sm">{formErrors.validFrom}</p>}
+                {formErrors.validUntil && <p className="text-yellow-500 text-sm">{formErrors.validUntil}</p>}
                 <div className="bg-blue-50 p-3 rounded text-sm">ℹ️ Student will receive an email with these scholarship details.</div>
               </div>
               <div className="p-6 border-t flex justify-end gap-3">

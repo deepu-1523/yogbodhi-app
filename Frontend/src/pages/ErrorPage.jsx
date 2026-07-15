@@ -14,15 +14,15 @@ const ErrorPage = () => {
         {/* Brand Icon */}
         <div className="mb-8 flex justify-center">
           <div className="w-24 h-24 rounded-[32px] bg-white border border-gray-100 flex items-center justify-center shadow-2xl shadow-blue-900/5 relative group">
-             <div className="absolute inset-0 bg-red-50 rounded-[32px] scale-0 group-hover:scale-100 transition-transform duration-500 opacity-50" />
-             <AlertCircle size={48} className="text-[#FB0500] relative z-10" />
+             <div className="absolute inset-0 bg-yellow-50 rounded-[32px] scale-0 group-hover:scale-100 transition-transform duration-500 opacity-50" />
+             <AlertCircle size={48} className="text-[#ba9d25] relative z-10" />
           </div>
         </div>
 
         {/* Error Info */}
         <div className="space-y-4 mb-12">
           <div className="flex items-center justify-center gap-2 mb-2">
-             <div className="w-2 h-2 rounded-full bg-[#FB0500]" />
+             <div className="w-2 h-2 rounded-full bg-[#ba9d25]" />
              <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">
                {is404 ? 'Resource Not Found' : 'Application Error'}
              </p>

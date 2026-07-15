@@ -558,7 +558,7 @@ const StudentTestPanel = () => {
       case 'medium':
         return 'bg-yellow-50 text-yellow-700 border border-yellow-200';
       case 'hard':
-        return 'bg-red-50 text-[#FB0500] border border-red-200';
+        return 'bg-yellow-50 text-[#ba9d25] border border-yellow-200';
       default:
         return 'bg-gray-100 text-gray-600';
     }
@@ -593,7 +593,7 @@ const StudentTestPanel = () => {
         <div className="relative bg-white border-b border-gray-100 overflow-hidden">
           <div className="absolute inset-0 opacity-[0.4]" style={{ backgroundImage: 'radial-gradient(#e5e7eb 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#0078FF]/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#FB0500]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#ba9d25]/5 rounded-full blur-3xl pointer-events-none" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
               <div className="flex-1">
@@ -602,7 +602,7 @@ const StudentTestPanel = () => {
                   <p className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Assessment Hub</p>
                 </div>
                 <h1 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight">
-                  Available <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB0500] via-[#0078FF] to-[#28A745]">Tests</span>
+                  Available <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ba9d25] via-[#0078FF] to-[#28A745]">Tests</span>
                 </h1>
                 {studentClass && (
                   <p className="text-sm text-gray-500 mt-2">
@@ -634,7 +634,7 @@ const StudentTestPanel = () => {
         <div className="bg-white border-b border-gray-100 shadow-sm relative z-20">
           <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 divide-x-0 md:divide-x divide-gray-100">
             {[
-              { label: 'Total Tests', value: tests.length, color: '#FB0500' },
+              { label: 'Total Tests', value: tests.length, color: '#ba9d25' },
               { label: 'Total Questions', value: totalQuestions, color: '#0078FF' },
               { label: 'Total Duration', value: `${Math.floor(totalDuration / 60)}h ${totalDuration % 60}m`, color: '#28A745' },
               { label: 'Completed', value: completedCount, color: '#F1C40F' },
@@ -679,7 +679,7 @@ const StudentTestPanel = () => {
                         test.isCompleted ? 'opacity-80' : ''
                       }`}
                     >
-                      <div className={`h-1.5 w-full ${accentRed ? 'bg-[#FB0500]' : 'bg-[#0078FF]'}`}></div>
+                      <div className={`h-1.5 w-full ${accentRed ? 'bg-[#ba9d25]' : 'bg-[#0078FF]'}`}></div>
                       <div className="p-6 flex flex-col flex-1">
                         <div className="flex items-start justify-between mb-4 flex-wrap gap-2">
                           <div className="flex items-center gap-2 flex-wrap">
@@ -738,7 +738,7 @@ const StudentTestPanel = () => {
                               !isLoggedIn || !studentClass
                                 ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                                 : accentRed
-                                ? 'bg-[#FB0500] text-white hover:opacity-90'
+                                ? 'bg-[#ba9d25] text-white hover:opacity-90'
                                 : 'bg-[#0078FF] text-white hover:opacity-90'
                             }`}
                           >
@@ -773,7 +773,7 @@ const StudentTestPanel = () => {
                 </div>
               </div>
               <div className="p-6 text-center">
-                <div className="text-5xl font-bold text-[#FB0500] mb-1">{viewingResult.percentage || viewingResult.score || 0}%</div>
+                <div className="text-5xl font-bold text-[#ba9d25] mb-1">{viewingResult.percentage || viewingResult.score || 0}%</div>
                 <p className="text-sm text-gray-500 mb-6">
                   {(viewingResult.percentage || 0) >= 70 ? 'Great job! You passed.' : 'Keep practicing to improve.'}
                 </p>
@@ -834,8 +834,8 @@ const StudentTestPanel = () => {
       return (
         <div className="min-h-screen bg-dot-grid flex items-center justify-center p-4">
           <div className="text-center max-w-sm bg-white rounded-2xl border border-gray-100 p-8 shadow-sm">
-            <div className="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center mx-auto mb-4">
-              <svg className="w-6 h-6 text-[#FB0500]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-12 h-12 rounded-xl bg-yellow-50 flex items-center justify-center mx-auto mb-4">
+              <svg className="w-6 h-6 text-[#ba9d25]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
@@ -865,7 +865,7 @@ const StudentTestPanel = () => {
                   <div
                     className={`px-3 py-1.5 rounded-lg font-mono font-bold text-sm tabular-nums ${
                       timeRemaining < 300
-                        ? 'bg-red-50 text-[#FB0500] border border-red-200'
+                        ? 'bg-yellow-50 text-[#ba9d25] border border-yellow-200'
                         : 'bg-blue-50 text-[#0078FF] border border-blue-100'
                     }`}
                   >
@@ -972,7 +972,7 @@ const StudentTestPanel = () => {
                     className={`px-5 py-2.5 rounded-xl font-semibold text-sm transition ${
                       !hasAnswered || submitting
                         ? 'bg-gray-100 text-gray-300 cursor-not-allowed'
-                        : 'bg-[#FB0500] text-white hover:opacity-90'
+                        : 'bg-[#ba9d25] text-white hover:opacity-90'
                     }`}
                   >
                     {submitting ? (
@@ -1061,7 +1061,7 @@ const StudentTestPanel = () => {
       resultAccent = 'text-yellow-500';
     } else {
       resultLabel = 'Need Improvement';
-      resultAccent = 'text-[#FB0500]';
+      resultAccent = 'text-[#ba9d25]';
     }
 
     return (
@@ -1095,7 +1095,7 @@ const StudentTestPanel = () => {
             <div className="grid grid-cols-2 gap-3 mb-7">
               {[
                 { label: 'Total Questions', value: questions.length, color: 'text-[#0078FF]' },
-                { label: 'Attempted', value: Object.keys(answers).length, color: 'text-[#FB0500]' },
+                { label: 'Attempted', value: Object.keys(answers).length, color: 'text-[#ba9d25]' },
                 { label: 'Score Obtained', value: obtainedMarks, color: 'text-[#08B100]' },
                 { label: 'Total Marks', value: totalPossibleMarks, color: 'text-gray-700' },
               ].map((s, i) => (

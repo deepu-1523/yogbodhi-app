@@ -32,7 +32,7 @@ const facultyMembers = [
     subject: "Biology",
     expertise: "Focused on life sciences and environmental studies. Specializes in genetics, human physiology, and ecology with practical approach.",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
-    color: "from-orange-500 to-red-500"
+    color: "from-orange-500 to-yellow-500"
   },
   {
     id: 5,

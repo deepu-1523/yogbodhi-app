@@ -547,8 +547,8 @@ const CourseContentManager = () => {
     return (
       <div className="flex justify-center items-center h-screen bg-gradient-to-br from-slate-50 to-slate-100 px-4">
         <div className="text-center bg-white p-6 sm:p-10 rounded-2xl shadow-xl max-w-md w-full">
-          <AlertCircle className="w-12 h-12 sm:w-16 sm:h-16 text-red-500 mx-auto mb-4" />
-          <p className="text-red-500 text-base sm:text-lg font-semibold mb-4">Course not found</p>
+          <AlertCircle className="w-12 h-12 sm:w-16 sm:h-16 text-yellow-500 mx-auto mb-4" />
+          <p className="text-yellow-500 text-base sm:text-lg font-semibold mb-4">Course not found</p>
           <button
             onClick={() => navigate('/admin/allcourses')}
             className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all font-medium text-sm sm:text-base w-full sm:w-auto justify-center"
@@ -583,7 +583,7 @@ const CourseContentManager = () => {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-3 sm:gap-4">
             <div className="flex-1 w-full">
               <div className="flex items-center gap-2 mb-1">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#FB0500]" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#ba9d25]" />
                 <p className="text-[9px] font-black text-gray-400 uppercase tracking-[0.3em]">Curriculum Manager</p>
               </div>
               <h1 className="text-lg sm:text-xl font-black text-gray-900 tracking-tight leading-none mb-2">
@@ -672,7 +672,7 @@ const CourseContentManager = () => {
                           <div className="flex items-center gap-0 opacity-0 group-hover:opacity-100 transition-opacity">
                             <button onClick={(e) => { e.stopPropagation(); openChapterModal(module); }} className="p-1 text-gray-400 hover:text-blue-600 transition-all"><Plus size={14} /></button>
                             <button onClick={(e) => { e.stopPropagation(); openModuleModal(module); }} className="p-1 text-gray-400 hover:text-green-600 transition-all"><Edit size={14} /></button>
-                            <button onClick={(e) => { e.stopPropagation(); handleDeleteModule(module._id); }} className="p-1 text-gray-400 hover:text-red-600 transition-all"><Trash2 size={14} /></button>
+                            <button onClick={(e) => { e.stopPropagation(); handleDeleteModule(module._id); }} className="p-1 text-gray-400 hover:text-yellow-600 transition-all"><Trash2 size={14} /></button>
                           </div>
                         </div>
 
@@ -690,7 +690,7 @@ const CourseContentManager = () => {
                                   </div>
                                   <div className="flex items-center gap-0 opacity-0 group-hover:opacity-100 transition-opacity">
                                     <button onClick={(e) => { e.stopPropagation(); openTopicModal(module, chapter); }} className="p-1 text-gray-400 hover:text-blue-600 transition-all"><Plus size={12} /></button>
-                                    <button onClick={(e) => { e.stopPropagation(); handleDeleteChapter(module._id, chapter._id); }} className="p-1 text-gray-400 hover:text-red-600 transition-all"><Trash2 size={12} /></button>
+                                    <button onClick={(e) => { e.stopPropagation(); handleDeleteChapter(module._id, chapter._id); }} className="p-1 text-gray-400 hover:text-yellow-600 transition-all"><Trash2 size={12} /></button>
                                   </div>
                                 </div>
 
@@ -704,7 +704,7 @@ const CourseContentManager = () => {
                                           <h4 className={`text-[10px] font-bold uppercase truncate ${isModalOpen && editingItem?._id === topic._id && modalType === 'topic' ? 'text-blue-600' : 'text-gray-500'}`}>{topic.title}</h4>
                                         </div>
                                         <div className="flex items-center gap-0 opacity-0 group-hover/lesson:opacity-100 transition-opacity">
-                                          <button onClick={(e) => { e.stopPropagation(); handleDeleteTopic(module._id, chapter._id, topic._id); }} className="p-1 text-gray-400 hover:text-red-600 transition-all"><Trash2 size={10} /></button>
+                                          <button onClick={(e) => { e.stopPropagation(); handleDeleteTopic(module._id, chapter._id, topic._id); }} className="p-1 text-gray-400 hover:text-yellow-600 transition-all"><Trash2 size={10} /></button>
                                         </div>
                                       </div>
                                     ))}
@@ -752,7 +752,7 @@ const CourseContentManager = () => {
                     <button 
                       type="button"
                       onClick={(e) => { e.stopPropagation(); closeModal(); }} 
-                      className="p-1.5 text-gray-400 hover:text-red-600 transition-all"
+                      className="p-1.5 text-gray-400 hover:text-yellow-600 transition-all"
                     >
                       <X size={16} />
                     </button>
@@ -864,7 +864,7 @@ const CourseContentManager = () => {
                                 <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Media Type</label>
                                 <div className="flex bg-gray-50 p-1 rounded-lg border border-gray-200 shadow-sm">
                                   <button type="button" onClick={() => setTopicData({ ...topicData, videoType: 'upload' })} className={`flex-1 py-2.5 rounded-md text-[9px] font-black uppercase transition-all ${topicData.videoType === 'upload' ? 'bg-white text-gray-900 shadow-sm border border-gray-100' : 'text-gray-400 hover:text-gray-600'}`}>Internal</button>
-                                  <button type="button" onClick={() => setTopicData({ ...topicData, videoType: 'youtube' })} className={`flex-1 py-2.5 rounded-md text-[9px] font-black uppercase transition-all flex items-center justify-center gap-2 ${topicData.videoType === 'youtube' ? 'bg-red-600 text-white shadow-md' : 'text-gray-400 hover:text-gray-600'}`}>
+                                  <button type="button" onClick={() => setTopicData({ ...topicData, videoType: 'youtube' })} className={`flex-1 py-2.5 rounded-md text-[9px] font-black uppercase transition-all flex items-center justify-center gap-2 ${topicData.videoType === 'youtube' ? 'bg-yellow-600 text-white shadow-md' : 'text-gray-400 hover:text-gray-600'}`}>
                                     <YoutubeIcon size={12} /> YouTube
                                   </button>
                                 </div>
@@ -899,7 +899,7 @@ const CourseContentManager = () => {
                                   <input
                                     type="url"
                                     placeholder="YOUTUBE LINK..."
-                                    className="w-full bg-white border border-gray-200 rounded-lg py-4 px-6 text-xs font-black focus:outline-none focus:border-red-600 transition-all tracking-wider"
+                                    className="w-full bg-white border border-gray-200 rounded-lg py-4 px-6 text-xs font-black focus:outline-none focus:border-yellow-600 transition-all tracking-wider"
                                     value={topicData.youtubeUrl}
                                     onChange={(e) => setTopicData({ ...topicData, youtubeUrl: e.target.value })}
                                   />
@@ -915,7 +915,7 @@ const CourseContentManager = () => {
                                     ) : (
                                       <div className="relative inline-block group">
                                         <video src={videoPreview || selectedTopic?.videoUrl} className="h-32 rounded-lg border border-gray-200 shadow-xl" controls />
-                                        <button onClick={removeVideo} className="absolute -top-3 -right-3 bg-red-600 text-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <button onClick={removeVideo} className="absolute -top-3 -right-3 bg-yellow-600 text-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
                                           <X size={12} />
                                         </button>
                                       </div>
@@ -944,7 +944,7 @@ const CourseContentManager = () => {
                                               setTopicData({ ...topicData, removeNotes: true });
                                             }
                                           }}
-                                          className="text-[8px] font-black text-red-600 uppercase tracking-widest flex items-center gap-1"
+                                          className="text-[8px] font-black text-yellow-600 uppercase tracking-widest flex items-center gap-1"
                                         >
                                           <Trash2 size={10} /> Remove
                                         </button>
@@ -988,7 +988,7 @@ const CourseContentManager = () => {
                                           setTopicData({ ...topicData, removeNotes: true });
                                         }
                                       }}
-                                      className="p-2 text-gray-400 hover:text-red-600 transition-all opacity-0 group-hover:opacity-100"
+                                      className="p-2 text-gray-400 hover:text-yellow-600 transition-all opacity-0 group-hover:opacity-100"
                                     >
                                       <X size={14} />
                                     </button>
@@ -1012,7 +1012,7 @@ const CourseContentManager = () => {
 
                 {/* Studio Integrated Footer */}
                 <div className="px-4 sm:px-10 py-4 sm:py-6 border-t border-gray-100 bg-white flex flex-col-reverse sm:flex-row items-center justify-between gap-4">
-                  <button onClick={closeModal} className="text-[9px] font-black uppercase text-gray-400 hover:text-red-600 transition-all tracking-[0.3em] py-2 w-full sm:w-auto text-center">Discard Changes</button>
+                  <button onClick={closeModal} className="text-[9px] font-black uppercase text-gray-400 hover:text-yellow-600 transition-all tracking-[0.3em] py-2 w-full sm:w-auto text-center">Discard Changes</button>
                   <button
                     onClick={() => {
                       if (modalType === 'module') handleAddModule();

@@ -83,7 +83,7 @@ const ClassroomCourses = () => {
   if (loading) return (
     <div className="min-h-screen bg-dot-grid flex items-center justify-center">
       <div className="text-center">
-        <div className="w-10 h-10 border-[3px] border-[#FB0500] border-t-transparent rounded-full animate-spin mx-auto" />
+        <div className="w-10 h-10 border-[3px] border-[#ba9d25] border-t-transparent rounded-full animate-spin mx-auto" />
         <p className="mt-4 text-sm text-gray-500 font-medium">Loading courses…</p>
       </div>
     </div>
@@ -94,7 +94,7 @@ const ClassroomCourses = () => {
     <div className="min-h-screen bg-dot-grid flex items-center justify-center">
       <div className="text-center bg-white rounded-2xl p-8 border border-gray-100 shadow-sm max-w-sm">
         <p className="text-gray-700 font-medium mb-4">{error}</p>
-        <button onClick={GetFullCourse} className="px-5 py-2 bg-[#FB0500] text-white text-sm font-semibold rounded-xl hover:opacity-90">Try Again</button>
+        <button onClick={GetFullCourse} className="px-5 py-2 bg-[#ba9d25] text-white text-sm font-semibold rounded-xl hover:opacity-90">Try Again</button>
       </div>
     </div>
   );
@@ -112,7 +112,7 @@ const ClassroomCourses = () => {
 
         {/* Subtle color glows for depth */}
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#0078FF]/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#FB0500]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#ba9d25]/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
@@ -123,7 +123,7 @@ const ClassroomCourses = () => {
               </div>
               <h1 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
                 Discover & Master<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB0500] via-[#0078FF] to-[#28A745]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ba9d25] via-[#0078FF] to-[#28A745]">
                   New Skills
                 </span>
               </h1>
@@ -132,7 +132,7 @@ const ClassroomCourses = () => {
             {/* Compact Stats */}
             <div className="flex gap-8 md:gap-12 md:px-8 md:border-x border-gray-100">
               <div>
-                <span className="text-xl md:text-2xl font-black text-[#FB0500]">{courses.length}+</span>
+                <span className="text-xl md:text-2xl font-black text-[#ba9d25]">{courses.length}+</span>
                 <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-0.5">Courses</p>
               </div>
               <div>
@@ -175,7 +175,7 @@ const ClassroomCourses = () => {
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${selectedCategory === cat
-                    ? 'bg-[#FB0500] text-white shadow-sm shadow-red-200'
+                    ? 'bg-[#ba9d25] text-white shadow-sm shadow-yellow-200'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                     }`}
                 >
@@ -200,7 +200,7 @@ const ClassroomCourses = () => {
         </div>
       </div>
 
-    {/* ── Main Content ── */}
+      {/* ── Main Content ── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
         {filtered.length === 0 ? (
@@ -208,7 +208,7 @@ const ClassroomCourses = () => {
             <div className="text-4xl mb-4">📚</div>
             <p className="text-gray-500 font-medium">No courses found</p>
             <p className="text-gray-400 text-sm mt-1">Try a different category or search term</p>
-            <button onClick={() => { setSelectedCategory('All'); setSearch(''); }} className="mt-5 px-5 py-2 bg-[#FB0500] text-white text-sm font-semibold rounded-xl hover:opacity-90">
+            <button onClick={() => { setSelectedCategory('All'); setSearch(''); }} className="mt-5 px-5 py-2 bg-[#ba9d25] text-white text-sm font-semibold rounded-xl hover:opacity-90">
               Clear filters
             </button>
           </div>
@@ -236,7 +236,7 @@ const ClassroomCourses = () => {
                         {enrolled && <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-green-50 text-green-600">Enrolled</span>}
                         {!enrolled && free && <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-[#0078FF]">Free</span>}
                       </div>
-                      <h3 className="font-semibold text-gray-900 group-hover:text-[#FB0500] transition-colors line-clamp-1">{course.title}</h3>
+                      <h3 className="font-semibold text-gray-900 group-hover:text-[#ba9d25] transition-colors line-clamp-1">{course.title}</h3>
                       <p className="text-sm text-gray-400 mt-1 line-clamp-1 leading-relaxed">{course.description || 'No description available'}</p>
                     </div>
                     <div className="flex items-center justify-between mt-3">
@@ -247,7 +247,7 @@ const ClassroomCourses = () => {
                       <div className="flex items-center gap-3">
                         <span className="font-black text-gray-900 text-sm">{priceLabel(course)}</span>
                         <button onClick={() => handleView(course)}
-                          className="px-4 py-1.5 bg-[#0078FF] text-white text-xs font-semibold rounded-xl hover:bg-[#FB0500] transition-colors">
+                          className="px-4 py-1.5 bg-[#0078FF] text-white text-xs font-semibold rounded-xl hover:bg-[#ba9d25] transition-colors">
                           {enrolled ? 'Continue →' : 'View Details →'}
                         </button>
                       </div>
@@ -300,14 +300,14 @@ const ClassroomCourses = () => {
                       ) : free ? (
                         <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-[#0078FF] text-white">Free</span>
                       ) : (
-                        <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-[#FB0500] text-white">{price}</span>
+                        <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-[#ba9d25] text-white">{price}</span>
                       )}
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="p-5 flex flex-col flex-1">
-                    <h3 className={`font-bold text-base mb-1.5 line-clamp-2 group-hover:text-[#FB0500] transition-colors ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                    <h3 className={`font-bold text-base mb-1.5 line-clamp-2 group-hover:text-[#ba9d25] transition-colors ${isDark ? 'text-white' : 'text-gray-900'}`}>
                       {course.title}
                     </h3>
                     <p className={`text-sm leading-relaxed line-clamp-2 mb-4 flex-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -339,7 +339,7 @@ const ClassroomCourses = () => {
                         onClick={() => handleView(course)}
                         className={`px-4 py-2 rounded-xl text-xs font-bold transition-colors ${enrolled
                           ? 'bg-green-500 text-white hover:bg-green-600'
-                          : 'bg-[#0078FF] text-white hover:bg-[#FB0500]'
+                          : 'bg-[#0078FF] text-white hover:bg-[#ba9d25]'
                           }`}
                       >
                         {enrolled ? 'Continue →' : 'View Details →'}
@@ -360,20 +360,20 @@ const ClassroomCourses = () => {
           backgroundImage: 'radial-gradient(#e5e7eb 1px, transparent 1px)',
           backgroundSize: '24px 24px'
         }} />
-        
-        <div className="absolute top-0 left-0 w-64 h-64 bg-[#FB0500]/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="absolute top-0 left-0 w-64 h-64 bg-[#ba9d25]/5 rounded-full blur-3xl pointer-events-none" />
         <div className="relative max-w-4xl mx-auto">
           <div className="bg-white border border-gray-100 rounded-3xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-center md:text-left">
               <p className="text-xs font-bold text-[#0078FF] uppercase tracking-[0.2em] mb-3">Not Sure Which to Pick?</p>
               <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-3">
-                Talk to our counselors — <span className="text-[#FB0500]">it's free</span>
+                Talk to our counselors — <span className="text-[#ba9d25]">it's free</span>
               </h3>
               <p className="text-gray-500 text-sm max-w-md">Get a personalized course recommendation based on your goals and current level.</p>
             </div>
-            <button 
+            <button
               onClick={() => navigate('/')}
-              className="flex-shrink-0 px-8 py-4 bg-[#FB0500] text-white font-black rounded-2xl text-sm hover:opacity-90 transition-all shadow-lg shadow-red-100 flex items-center gap-2"
+              className="flex-shrink-0 px-8 py-4 bg-[#ba9d25] text-white font-black rounded-2xl text-sm hover:opacity-90 transition-all shadow-lg shadow-yellow-100 flex items-center gap-2"
             >
               Request Free Callback
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

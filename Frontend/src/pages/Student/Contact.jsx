@@ -16,7 +16,7 @@ const PencilIcon = () => (
 const inputCls = (err) =>
   `w-full px-4 py-3 bg-white border rounded-xl text-sm outline-none transition-all duration-200 ${
     err
-      ? 'border-red-400 focus:ring-2 focus:ring-red-200'
+      ? 'border-yellow-400 focus:ring-2 focus:ring-yellow-200'
       : 'border-gray-200 focus:border-[#0078FF] focus:ring-2 focus:ring-blue-100'
   }`;
 const labelCls = 'block text-xs font-bold text-gray-600 uppercase tracking-wide mb-2';
@@ -87,7 +87,7 @@ const Contact = () => {
         
         {/* Subtle glows */}
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#0078FF]/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#FB0500]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#ba9d25]/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
@@ -98,7 +98,7 @@ const Contact = () => {
               </div>
               <h1 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight">
                 Let's start a<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB0500] via-[#0078FF] to-[#28A745]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ba9d25] via-[#0078FF] to-[#28A745]">
                   conversation
                 </span>
               </h1>
@@ -107,7 +107,7 @@ const Contact = () => {
             {/* Quick Connect Badges - Compact */}
             <div className="flex flex-wrap gap-4 md:px-10 md:border-l border-gray-100">
               {[
-                { t: '⚡ Fast Reply', c: '#FB0500' },
+                { t: '⚡ Fast Reply', c: '#ba9d25' },
                 { t: '📍 Ludhiana', c: '#0078FF' },
                 { t: '🎓 10K+ Guided', c: '#28A745' }
               ].map(item => (
@@ -126,7 +126,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { icon: '📞', label: 'Call Us', value: '+91 98775-15330', hint: 'Mon–Sat, 9am–6pm', bg: 'hover:border-red-200 hover:bg-red-50', accent: 'text-[#FB0500]', href: 'tel:+919877515330' },
+              { icon: '📞', label: 'Call Us', value: '+91 98775-15330', hint: 'Mon–Sat, 9am–6pm', bg: 'hover:border-yellow-200 hover:bg-yellow-50', accent: 'text-[#ba9d25]', href: 'tel:+919877515330' },
               { icon: '✉️', label: 'Email Us', value: 'rootsclasses1313@gmail.com', hint: 'We reply within 24h', bg: 'hover:border-blue-200 hover:bg-blue-50', accent: 'text-[#0078FF]', href: 'mailto:rootsclasses1313@gmail.com?subject=Root%20classes%20enquiry&body=Hi%2C%20I%20wanted%20to%20enquire%20about...' },
               { icon: '💬', label: 'WhatsApp', value: 'Chat with us', hint: 'Quick responses', bg: 'hover:border-green-200 hover:bg-green-50', accent: 'text-green-600', href: 'https://wa.me/919877515330' },
             ].map(item => (
@@ -177,13 +177,13 @@ const Contact = () => {
               {/* Address card — dark */}
               <div className="bg-white rounded-2xl p-6 relative overflow-hidden border border-gray-100 shadow-sm">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#0078FF]/5 rounded-full blur-2xl pointer-events-none" />
-                <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-[#FB0500]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <div className="w-10 h-10 bg-yellow-50 rounded-xl flex items-center justify-center mb-4">
+                  <svg className="w-5 h-5 text-[#ba9d25]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <p className="text-xs font-bold text-[#FB0500] uppercase tracking-widest mb-1">Our Location</p>
+                <p className="text-xs font-bold text-[#ba9d25] uppercase tracking-widest mb-1">Our Location</p>
                 <h3 className="font-bold text-gray-900 mb-2">Ludhiana Centre</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   Gill Rd, opp. ITI College,<br />Shilapuri, Ludhiana,<br />Punjab — 141003
@@ -224,7 +224,7 @@ const Contact = () => {
                     { name: 'Facebook',  href: 'https://www.facebook.com/rootsclasses1313/', color: 'hover:bg-blue-600',  icon: <FaFacebook size={18} /> },
                     { name: 'Instagram', href: 'https://www.instagram.com/roots_classes', color: 'hover:bg-pink-600',  icon: <FaInstagram size={18} /> },
                     { name: 'LinkedIn',  href: 'https://www.linkedin.com/company/roots-classes/', color: 'hover:bg-blue-700', icon: <FaLinkedin size={18} /> },
-                    { name: 'YouTube',   href: 'https://www.youtube.com/@nikolaphysics', color: 'hover:bg-red-600',   icon: <FaYoutube size={18} /> },
+                    { name: 'YouTube',   href: 'https://www.youtube.com/@nikolaphysics', color: 'hover:bg-yellow-600',   icon: <FaYoutube size={18} /> },
                   ].map(s => (
                     <a key={s.name} href={s.href} target="_blank" rel="noopener noreferrer"
                       className={`w-full aspect-square rounded-xl bg-gray-100 flex items-center justify-center text-gray-500 transition-all hover:text-white hover:shadow-sm ${s.color}`}>
@@ -238,7 +238,7 @@ const Contact = () => {
               {student && (
                 <div className="bg-white rounded-2xl p-5 border border-blue-100">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-[#FB0500] rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#ba9d25] rounded-full flex items-center justify-center flex-shrink-0">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>
@@ -284,8 +284,8 @@ const Contact = () => {
                     </div>
                   )}
                   {submitStatus === 'error' && (
-                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3">
-                      <span className="text-red-500 text-lg">✕</span>
+                    <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl flex items-center gap-3">
+                      <span className="text-yellow-500 text-lg">✕</span>
                       <p className="text-sm text-red-700 font-medium">Something went wrong. Please try again.</p>
                     </div>
                   )}
@@ -294,24 +294,24 @@ const Contact = () => {
                     {/* Name + Email */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
-                        <label className={labelCls}>Full Name <span className="text-[#FB0500]">*</span></label>
+                        <label className={labelCls}>Full Name <span className="text-[#ba9d25]">*</span></label>
                         <input type="text" name="name" value={formData.name} onChange={handleChange}
                           readOnly={!!student} placeholder="Your full name"
                           className={inputCls(errors.name) + (student ? ' bg-gray-50 text-gray-500 cursor-not-allowed' : '')} />
-                        {errors.name && <p className="mt-1.5 text-xs text-red-500">{errors.name}</p>}
+                        {errors.name && <p className="mt-1.5 text-xs text-yellow-500">{errors.name}</p>}
                       </div>
                       <div>
-                        <label className={labelCls}>Email Address <span className="text-[#FB0500]">*</span></label>
+                        <label className={labelCls}>Email Address <span className="text-[#ba9d25]">*</span></label>
                         <input type="email" name="email" value={formData.email} onChange={handleChange}
                           readOnly={!!student} placeholder="your@email.com"
                           className={inputCls(errors.email) + (student ? ' bg-gray-50 text-gray-500 cursor-not-allowed' : '')} />
-                        {errors.email && <p className="mt-1.5 text-xs text-red-500">{errors.email}</p>}
+                        {errors.email && <p className="mt-1.5 text-xs text-yellow-500">{errors.email}</p>}
                       </div>
                     </div>
 
                     {/* Subject */}
                     <div>
-                      <label className={labelCls}>Subject <span className="text-[#FB0500]">*</span></label>
+                      <label className={labelCls}>Subject <span className="text-[#ba9d25]">*</span></label>
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
                         {['Admission Query', 'Fee Structure', 'Course Info', 'Other'].map(s => (
                           <button key={s} type="button"
@@ -327,18 +327,18 @@ const Contact = () => {
                       <input type="text" name="subject" value={formData.subject} onChange={handleChange}
                         placeholder="Or type your own subject…"
                         className={inputCls(errors.subject)} />
-                      {errors.subject && <p className="mt-1.5 text-xs text-red-500">{errors.subject}</p>}
+                      {errors.subject && <p className="mt-1.5 text-xs text-yellow-500">{errors.subject}</p>}
                     </div>
 
                     {/* Message */}
                     <div>
-                      <label className={labelCls}>Your Message <span className="text-[#FB0500]">*</span></label>
+                      <label className={labelCls}>Your Message <span className="text-[#ba9d25]">*</span></label>
                       <textarea name="message" rows={5} value={formData.message} onChange={handleChange}
                         placeholder="Tell us more about your inquiry — the more detail, the better we can help…"
                         className={inputCls(errors.message) + ' resize-none'} />
                       <div className="flex items-center justify-between mt-1.5">
                         {errors.message
-                          ? <p className="text-xs text-red-500">{errors.message}</p>
+                          ? <p className="text-xs text-yellow-500">{errors.message}</p>
                           : <span />}
                         <span className="text-xs text-gray-300">{formData.message.length} chars</span>
                       </div>
@@ -347,7 +347,7 @@ const Contact = () => {
                     {/* Submit */}
                     <div className="flex flex-col sm:flex-row gap-3 pt-2">
                       <button type="submit" disabled={isSubmitting}
-                        className="flex-1 py-3 bg-[#FB0500] text-white font-bold rounded-xl text-sm hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+                        className="flex-1 py-3 bg-[#ba9d25] text-white font-bold rounded-xl text-sm hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">
                         {isSubmitting ? (
                           <><div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />Sending…</>
                         ) : (
@@ -397,7 +397,7 @@ const Contact = () => {
                   Gill Rd, opp. ITI College,<br />Shilapuri, Ludhiana,<br />Punjab — 141003
                 </p>
                 <a href="https://maps.google.com/?q=Gill+Road+ITI+College+Shilapuri+Ludhiana" target="_blank" rel="noopener noreferrer"
-                  className="relative inline-flex items-center gap-2 mt-5 px-4 py-2 bg-[#FB0500] text-white text-xs font-bold rounded-xl hover:opacity-90 transition shadow-lg shadow-red-100">
+                  className="relative inline-flex items-center gap-2 mt-5 px-4 py-2 bg-[#ba9d25] text-white text-xs font-bold rounded-xl hover:opacity-90 transition shadow-lg shadow-yellow-100">
                   Get Directions →
                 </a>
               </div>
