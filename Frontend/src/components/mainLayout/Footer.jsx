@@ -52,7 +52,7 @@ const Footer = () => {
             <div className="mb-6">
               <div className="flex-shrink-0 flex justify-center md:justify-start">
                 <Link to="/" className="flex items-center space-x-3">
-                  <img src="./assets/yogbodhi.png" alt="Roots Classes Logo" className="h-15 w-auto" />
+                  <img src="/assets/yogbodhi.png" alt="Roots Classes Logo" className="h-15 w-auto" />
                 </Link>
               </div>
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed mt-4 max-w-md mx-auto md:mx-0">

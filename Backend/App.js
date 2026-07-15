@@ -40,25 +40,29 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/student", studentRouter);
-app.use("/admin", adminRouter);
-app.use("/instructor", instructorRouter)
-app.use("/onlineClass", classRouter)
-app.use("/joinclass", attendanceRouter)
-app.use("/blog", blogRouter)
-app.use("/slider", sliderRouter)
-app.use("/testimonial", testimonialRouter)
-app.use("/category", categoryRouter)
-app.use("/course", createcourseRouter)
-app.use("/enroll", enrollmentRouter)
-app.use("/test", testRouter)
-app.use("/result", resultRouter)
-app.use("/payment", paymentRouter)
-app.use("/scholarship", scholarshipRouter)
-app.use("/success-story", successStoryRouter);
-app.use("/callback", callbackRouter);
-app.use("/faculty", facultyRouter);
-app.use("/progress", progressRouter)
+const apiRouter = express.Router();
+
+apiRouter.use("/student", studentRouter);
+apiRouter.use("/admin", adminRouter);
+apiRouter.use("/instructor", instructorRouter)
+apiRouter.use("/onlineClass", classRouter)
+apiRouter.use("/joinclass", attendanceRouter)
+apiRouter.use("/blog", blogRouter)
+apiRouter.use("/slider", sliderRouter)
+apiRouter.use("/testimonial", testimonialRouter)
+apiRouter.use("/category", categoryRouter)
+apiRouter.use("/course", createcourseRouter)
+apiRouter.use("/enroll", enrollmentRouter)
+apiRouter.use("/test", testRouter)
+apiRouter.use("/result", resultRouter)
+apiRouter.use("/payment", paymentRouter)
+apiRouter.use("/scholarship", scholarshipRouter)
+apiRouter.use("/success-story", successStoryRouter);
+apiRouter.use("/callback", callbackRouter);
+apiRouter.use("/faculty", facultyRouter);
+apiRouter.use("/progress", progressRouter)
+
+app.use("/api", apiRouter);
 
 
 
