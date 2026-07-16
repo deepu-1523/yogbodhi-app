@@ -43,7 +43,7 @@ const ProgramPage = () => (
           <p className="text-xs font-bold text-[#ba9d25] uppercase tracking-widest mb-3">Our Programs</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Choose your stream</h2>
         </div>
-        <Link to="/course" className="text-sm font-semibold text-gray-900 border-b-2 border-gray-200 hover:border-[#ba9d25] hover:text-[#ba9d25] transition-all pb-0.5 self-end group flex items-center gap-1">
+        <Link to="/course" className="text-sm font-semibold text-gray-900 border-b-2 border-gray-200 hover:border-[#ba9d25] hover:text-[#ba9d25] transition-all pb-0.5  group flex items-center gap-1">
           View all courses <span className="group-hover:translate-x-1 transition-transform">→</span>
         </Link>
       </div>

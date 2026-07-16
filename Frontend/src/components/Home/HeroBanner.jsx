@@ -38,7 +38,7 @@ const HeroBanner = () => {
         </div>
 
         {/* Center Column (Logo & Tagline) */}
-        <div className="flex flex-col items-center justify-center text-center md:w-[60%] px-13 py-8 md:py-0 z-20 mt-4 md:mt-0">
+        <div className="flex flex-col items-center justify-center text-center md:w-[100%] px-13 py-8 md:py-0 z-20 mt-4 md:mt-0">
           <div className="flex items-center justify-center mb-6">
             {/* Text-based Logo to replicate the image */}
             <div className="flex items-center gap-1">
@@ -71,7 +71,7 @@ const HeroBanner = () => {
         </div>
 
         {/* Right Column (Instructor & Subjects) */}
-        <div className="flex justify-between md:justify-end items-center md:w-[25%] relative z-20 h-[300px] md:h-full mt-8 md:mt-0 w-full">
+        <div className="flex justify-center items-center md:w-[20%] relative z-20 h-[300px] md:h-full mt-8 md:mt-0 ">
           <div className="flex flex-col gap-5 absolute top-1/2 -translate-y-1/2 z-30">
             {[
               { icon: Atom, text: 'Physics' },
@@ -80,7 +80,7 @@ const HeroBanner = () => {
               { icon: Dna, text: 'Biology' }
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-4 group justify-end">
-                <div className="border-b border-gray-300 pb-2 w-24 text-right hidden md:block">
+                <div className="border-b border-gray-300 pb-2 w-32 text-right hidden md:block">
                   <span className="font-bold text-[#0a1b4d] text-lg">{item.text}</span>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-[#f28e2b] flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform shadow-md">
@@ -93,10 +93,10 @@ const HeroBanner = () => {
             ))}
           </div>
 
-          <div className="h-[400px] lg:h-[550px] flex items-end ml-auto relative z-10 w-full md:w-auto justify-end">
-            {/* Using the hero image from assets */}
-            <img src={heroImg} alt="Instructor" className="h-full max-h-[100%] object-contain object-bottom drop-shadow-2xl relative z-20" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x600.png?text=Instructor+Image' }} />
-          </div>
+          {/* <div className="h-[400px] lg:h-[550px] flex items-end ml-auto relative z-10 w-full md:w-auto justify-end"> */}
+          {/* Using the hero image from assets */}
+          {/* <img src={heroImg} alt="Instructor" className="h-full max-h-[100%] object-contain object-bottom drop-shadow-2xl relative z-20" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x600.png?text=Instructor+Image' }} /> */}
+          {/* </div> */}
         </div>
 
       </div>
