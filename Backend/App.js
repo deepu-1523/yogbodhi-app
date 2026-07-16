@@ -66,11 +66,9 @@ app.use("/api", apiRouter);
 
 
 
-const frontendPath = path.join(__dirname, "../Frontend/dist");
-app.use(express.static(frontendPath));
-
-app.use((req, res) => {
-  res.sendFile(path.join(frontendPath, "index.html"));
+// Since the frontend is deployed separately on Vercel, we only need a basic health check route here
+app.get("/", (req, res) => {
+  res.send("Yogbodhi API is running...");
 });
 
 export default app;
