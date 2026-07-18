@@ -89,18 +89,20 @@ const Navbar = () => {
         <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-[#ba9d25]/5 to-[#ba9d25]/1 pointer-events-none" />
         <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-[#ba9d25]/5 to-[#ba9d25]/1 pointer-events-none" />
 
-        <div className="relative z-10 flex items-center justify-center gap-2 text-[10px] sm:text-xs tracking-wide">
-          <span className="flex items-center gap-1.5 font-bold text-gray-700 bg-[#FEF2F2] px-2.5 py-0.5 rounded-full border border-yellow-100/50">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ba9d25] animate-pulse"></span>
-            Admissions open for 2025-26 batch
-          </span>
-          <span className="text-gray-300 hidden sm:inline">|</span>
-          <Link to="/scholarship" className="group flex items-center gap-1 font-black">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ba9d25] to-[#a88c21] group-hover:from-[#a88c21] group-hover:to-[#ba9d25] transition-all">
-              Apply for 100% Scholarship
+        <div className="relative z-10 overflow-hidden w-full">
+          <div className="animate-marquee flex items-center gap-4 text-[10px] sm:text-xs tracking-wide">
+            <span className="flex items-center gap-1.5 font-bold text-gray-700 bg-[#FEF2F2] px-2.5 py-0.5 rounded-full border border-yellow-100/50">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ba9d25] animate-pulse"></span>
+              Admissions open for 2025-26 batch
             </span>
-            <span className="text-[#ba9d25] group-hover:translate-x-0.5 transition-transform">→</span>
-          </Link>
+            <span className="text-gray-300 hidden sm:inline">|</span>
+            <Link to="/scholarship" className="group flex items-center gap-1 font-black">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ba9d25] to-[#a88c21] group-hover:from-[#a88c21] group-hover:to-[#ba9d25] transition-all">
+                Apply for 100% Scholarship
+              </span>
+              <span className="text-[#ba9d25] group-hover:translate-x-0.5 transition-transform">→</span>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -218,7 +220,7 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-100 bg-white">
+          <div className="md:hidden absolute top-full right-0 w-[50%] border-t border-gray-100 bg-white shadow-2xl">
             <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
               {navItems.map((item) => (
                 <Link key={item.name} to={item.path}
@@ -276,7 +278,7 @@ const Navbar = () => {
           </div>
         )}
       </nav>
-    </header>
+    </header >
   );
 };
 
