@@ -13,12 +13,12 @@ const HeroBanner = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNlN2U1ZTQiLz48L3N2Zz4=')] opacity-50"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 relative z-10 py-12 md:py-1 lg:py-1">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 relative z-10 py-5 md:py-1 lg:pt-0">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center lg:items-start">
 
           {/* Left Content Area */}
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-3 lg:pt-1">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-2 lg:pt-0">
 
             {/* Top Badge */}
             <div className="inline-flex items-center gap-2 px-4 rounded-full bg-white/80 backdrop-blur-sm border border-orange-200 shadow-sm animate-fade-in-up">
@@ -83,9 +83,9 @@ const HeroBanner = () => {
           </div>
 
           {/* Right Visual Area - Glassmorphism floating cards */}
-          <div className="relative h-[500px] w-full hidden lg:flex items-center justify-center">
+          <div className="relative h-[500px] w-full hidden lg:flex items-center justify-center lg:mt-4">
             {/* Center Core */}
-            <div className="absolute z-20 w-32 h-32 rounded-full bg-white shadow-2xl flex items-center justify-center border-4 border-orange-50 p-4">
+            <div className="absolute z-20 w-32 h-35 rounded-full bg-white shadow-2xl flex items-center justify-center border-4 border-orange-50">
               <img src="/assets/yogbodhi.png" alt="Yogbodhi Logo" className="w-full h-auto object-contain drop-shadow-md" />
             </div>
 
