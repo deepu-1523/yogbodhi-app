@@ -220,7 +220,7 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full right-0 w-[50%] border-t border-gray-100 bg-white shadow-2xl">
+          <div className="md:hidden absolute top-full right-0 w-[100%] border-t border-gray-100 bg-white shadow-2xl">
             <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
               {navItems.map((item) => (
                 <Link key={item.name} to={item.path}
