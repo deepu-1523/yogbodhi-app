@@ -84,14 +84,14 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-[60] w-full">
       {/* Announcement bar (Glassmorphism Light) */}
-      <div className="relative overflow-hidden bg-[#fdfdfd]/80 backdrop-blur-md border-b border-gray-200/50 py-1.5 px-4 text-center">
+      <div className="relative overflow-hidden bg-[#fdfdfd]/80 backdrop-blur-md border-b border-gray-200/50 py-1 px-4 text-center">
         {/* Subtle decorative color accents */}
         <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-[#ba9d25]/5 to-[#ba9d25]/1 pointer-events-none" />
         <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-[#ba9d25]/5 to-[#ba9d25]/1 pointer-events-none" />
 
         <div className="relative z-10 overflow-hidden w-full">
           <div className="animate-marquee flex items-center gap-4 text-[10px] sm:text-xs tracking-wide">
-            <span className="flex items-center gap-1.5 font-bold text-gray-700 bg-[#FEF2F2] px-2.5 py-0.5 rounded-full border border-yellow-100/50">
+            <span className="flex items-center gap-1.5 font-bold text-gray-700 bg-[#FEF2F2] px-3 py-0.5 rounded-full border border-yellow-100/50">
               <span className="w-1.5 h-1.5 rounded-full bg-[#ba9d25] animate-pulse"></span>
               Admissions open for 2025-26 batch
             </span>
@@ -113,7 +113,7 @@ const Navbar = () => {
 
             {/* Logo */}
             <Link to="/" className="flex items-center flex-shrink-0">
-              <img src="/assets/yogbodhi.png" alt="Roots Classes" className="h-15 w-auto ml-6" />
+              <img src="/assets/yogbodhi.png" alt="Roots Classes" className="h-15 w-auto ml-2" />
             </Link>
 
             {/* Desktop nav */}

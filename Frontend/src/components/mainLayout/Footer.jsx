@@ -42,26 +42,25 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-500">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
-        {/* Responsive Grid: 1 column on mobile, 2 on tablet, 3 on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-8 mb-8 md:mb-10 lg:mb-12">
+    <footer className="relative bg-gray-900 text-gray-400 overflow-hidden border-t border-gray-800 mt-auto">
+      {/* Background glowing effects */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute -top-24 -left-24 w-96 h-9 bg-[#ba9d25]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#ba9d25]/5 rounded-full blur-3xl"></div>
+      </div>
 
-          {/* Brand Section - Centered on mobile, left on desktop */}
-          <div className="lg:col-span-1 text-center md:text-left">
-            <div className="mb-6">
-              <div className="flex-shrink-0 flex justify-center md:justify-start">
-                <Link to="/" className="flex items-center space-x-3">
-                  <img src="/assets/yogbodhi.png" alt="Roots Classes Logo" className="h-15 w-auto" />
-                </Link>
-              </div>
-              <p className="text-gray-300 text-sm sm:text-base leading-relaxed mt-4 max-w-md mx-auto md:mx-0">
-                Empowering learners worldwide. Discover courses, tutorials, and resources to enhance your skills.
-              </p>
-            </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-1 py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
 
-            {/* Social Links - Centered on mobile, left on desktop */}
-            <div className="flex gap-3 justify-center md:justify-start">
+          {/* Brand Section */}
+          <div className="lg:col-span-1 text-center md:text-left flex flex-col items-center md:items-start">
+            <Link to="/" className="inline-block mb-6">
+              <img src="/assets/yogbodhi.png" alt="Roots Classes Logo" className="h-17 w-full drop-shadow-xl" />
+            </Link>
+            <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-xs text-balance">
+              Empowering learners worldwide with premium educational resources, interactive tutorials, and expert-led courses.
+            </p>
+            <div className="flex gap-4 justify-center md:justify-start">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -69,7 +68,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit our ${social.name} page`}
-                  className={`w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 transition-all duration-300 hover:text-white ${social.color} hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#ba9d25] focus:ring-offset-2 focus:ring-offset-gray-800`}
+                  className={`w-10 h-10 rounded-full bg-gray-800/80 border border-gray-700/50 flex items-center justify-center text-gray-400 transition-all duration-300 hover:text-white ${social.color} hover:border-transparent hover:shadow-[0_0_15px_rgba(186,157,37,0.3)] hover:-translate-y-1`}
                 >
                   {social.icon}
                 </a>
@@ -77,101 +76,116 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links - Centered on mobile, left on desktop */}
+          {/* Quick Links */}
           <div className="text-center md:text-left">
-            <h3 className="text-base sm:text-lg font-semibold text-white mb-6 relative inline-block md:inline-block">
-              Pages
-              <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-[#ba9d25] to-[#a88c21] mt-1 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0"></div>
+            <h3 className="text-white text-lg font-bold mb-6 tracking-wide">
+              Quick Links
+              <span className="block w-20 h-1 bg-gradient-to-r from-[#ba9d25] to-transparent mt-2 mx-auto md:mx-0 rounded-full"></span>
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 group justify-center md:justify-start"
+                    className=" text-sm text-gray-400 hover:text-[#ba9d25] transition-all duration-300 flex items-center gap-2 group justify-center md:justify-start w-fit mx-auto md:mx-0"
                   >
-                    <ChevronRight size={14} className="text-[#ba9d25] transition-all duration-300 group-hover:translate-x-1 flex-shrink-0" />
-                    <span className="group-hover:translate-x-1 transition-transform duration-300">
-                      {link.name}
-                    </span>
+                    <ChevronRight size={14} className="opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-[#ba9d25]" />
+                    <span>{link.name}</span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact Information - Centered on mobile, left on desktop */}
+          {/* Contact Information */}
           <div className="text-center md:text-left">
-            <h3 className="text-base sm:text-lg font-semibold text-white mb-6 relative inline-block md:inline-block">
-              Corporate Office
-              <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-[#ba9d25] to-[#a88c21] mt-1 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0"></div>
+            <h3 className="text-white text-lg font-bold mb-6 tracking-wide">
+              Contact Us
+              <span className="block w-20 h-1 bg-gradient-to-r from-[#ba9d25] to-transparent mt-2 mx-auto md:mx-0 rounded-full"></span>
             </h3>
-            <div className="space-y-4">
-              {/* Phone */}
-              <div className="flex items-center gap-3 group justify-center md:justify-start">
-                <div className="w-10 h-10 rounded-lg bg-gray-700 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ba9d25] transition-all duration-300">
-                  <Phone size={18} className="text-gray-300 group-hover:text-white" />
+            <div className="space-y-5">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3 group">
+                <div className="w-10 h-10 rounded-lg bg-gray-800/80 border border-gray-700/50 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ba9d25]/10 group-hover:border-[#ba9d25]/30 transition-all duration-300">
+                  <Phone size={18} className="text-[#ba9d25]" />
                 </div>
-                <div>
-                  <p className="text-gray-300 text-sm sm:text-base">
-                    +91 98775-15330
-                  </p>
+                <div className="mt-1 md:mt-2">
+                  <p className="text-sm hover:text-white transition-colors cursor-pointer">+91 98775-15330</p>
                 </div>
               </div>
 
-              {/* Email */}
-              <div className="flex items-center gap-3 group justify-center md:justify-start">
-                <div className="w-10 h-10 rounded-lg bg-gray-700 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ba9d25] transition-all duration-300">
-                  <Mail size={18} className="text-gray-300 group-hover:text-white" />
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3 group">
+                <div className="w-10 h-10 rounded-lg bg-gray-800/80 border border-gray-700/50 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ba9d25]/10 group-hover:border-[#ba9d25]/30 transition-all duration-300">
+                  <Mail size={18} className="text-[#ba9d25]" />
                 </div>
-                <div>
-                  <p className="text-gray-300 text-sm sm:text-base break-all">
-                    yogbodhiglobal1313@gmail.com
-                  </p>
+                <div className="mt-1 md:mt-2 break-all">
+                  <p className="text-sm hover:text-white transition-colors cursor-pointer">yogbodhiglobal1313@gmail.com</p>
                 </div>
               </div>
 
-              {/* Address */}
-              <div className="flex items-start gap-3 group justify-center md:justify-start">
-                <div className="w-10 h-10 rounded-lg bg-gray-700 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-[#ba9d25] transition-all duration-300">
-                  <MapPin size={18} className="text-gray-300 group-hover:text-white" />
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3 group">
+                <div className="w-10 h-10 rounded-lg bg-gray-800/80 border border-gray-700/50 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ba9d25]/10 group-hover:border-[#ba9d25]/30 transition-all duration-300">
+                  <MapPin size={18} className="text-[#ba9d25]" />
                 </div>
-                <div className="text-left">
-                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                    Gill Rd, opp. Opposite ITI College,<br />
-                    Shilapuri, Ludhiana, Punjab 141003
+                <div className="mt-1 md:mt-2">
+                  <p className="text-sm leading-relaxed max-w-[200px] mx-auto md:mx-0">
+                    Gill Rd, opp. ITI College, Shilapuri, Ludhiana, Punjab 141003
                   </p>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Newsletter Section */}
+          <div className="text-center md:text-left">
+            <h3 className="text-white text-lg font-bold mb-6 tracking-wide">
+              Newsletter
+              <span className="block w-20 h-1 bg-gradient-to-r from-[#ba9d25] to-transparent mt-2 mx-auto md:mx-0 rounded-full"></span>
+            </h3>
+            <p className="text-sm mb-4 text-gray-400 max-w-xs mx-auto md:mx-0">
+              Subscribe to get the latest updates and exclusive offers delivered to your inbox.
+            </p>
+            <form className="flex flex-col gap-3 max-w-xs mx-auto md:mx-0" onSubmit={(e) => e.preventDefault()}>
+              <div className="relative group">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="w-full bg-gray-800/50 text-white text-sm rounded-xl pl-4 pr-10 py-3 outline-none border border-gray-700 focus:border-[#ba9d25] focus:bg-gray-800 transition-all duration-300 placeholder-gray-500"
+                  required
+                />
+                <Mail size={18} className="absolute right-3 top-3.5 text-dark group-focus-within:text-[#ba9d25] transition-colors" />
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-[#ba9d25] to-[#a88c21] hover:from-[#a88c21] hover:to-[#947b1c] text-white font-semibold py-3 rounded-xl transition-all duration-300 shadow-[0_4px_14px_rgba(186,157,37,0.25)] hover:shadow-[0_6px_20px_rgba(186,157,37,0.4)] hover:-translate-y-0.5 active:translate-y-0"
+              >
+                Subscribe Now
+              </button>
+            </form>
+          </div>
+
         </div>
 
-        {/* Copyright Section - Fully Responsive */}
-        <div className="border-t border-gray-700/50 pt-6 sm:pt-8 mt-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
-            <p className="text-gray-400 text-xs sm:text-sm">
-              © {currentYear} Yogbodhi Global. All rights reserved.
-            </p>
-            <p className="text-gray-500 text-xs flex flex-wrap justify-center gap-x-3 gap-y-1">
-              <Link to="/termsandconditions" className="hover:text-white transition-colors duration-200">
-                Terms
-              </Link>
-              <span className="text-gray-600">•</span>
-              <Link to="/privacypolicy" className="hover:text-white transition-colors duration-200">
-                Privacy
-              </Link>
-              <span className="text-gray-600">•</span>
-              <Link to="/contact" className="hover:text-white transition-colors duration-200">
-                Support
-              </Link>
-            </p>
+        {/* Footer Bottom */}
+        <div className="border-t border-gray-800 pt-8 mt-2 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs sm:text-sm text-gray-500 text-center md:text-left">
+            © {currentYear} Yogbodhi Global. All rights reserved.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
+            <Link to="/termsandconditions" className="text-gray-500 hover:text-[#ba9d25] transition-colors duration-200">
+              Terms of Service
+            </Link>
+            <Link to="/privacypolicy" className="text-gray-500 hover:text-[#ba9d25] transition-colors duration-200">
+              Privacy Policy
+            </Link>
+            <Link to="/contact" className="text-gray-500 hover:text-[#ba9d25] transition-colors duration-200">
+              Support Center
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Decorative Bottom Gradient */}
-      <div className="h-1 bg-gradient-to-r from-[#ba9d25] via-[#a88c21] to-[#947b1c]"></div>
+      {/* Decorative Bottom Gradient Line */}
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#ba9d25] via-yellow-400 to-[#ba9d25]"></div>
     </footer>
   );
 };
